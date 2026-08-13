@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>明珠湖畔 5 公里美食挑选</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202124;
+      --muted: #667085;
+      --line: #d9dee7;
+      --panel: #ffffff;
+      --soft: #f5f7fb;
+      --brand: #0f766e;
+      --brand-2: #c2410c;
+      --accent: #f59e0b;
+      --shadow: 0 18px 45px rgba(15, 23, 42, .10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "PingFang SC", system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--soft);
+      letter-spacing: 0;
+    }
+
+    button, input, select {
+      font: inherit;
+    }
+
+    .hero {
+      min-height: 36vh;
+      display: grid;
+      align-items: end;
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, .66), rgba(0, 0, 0, .20)),
+        url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1800&q=82") center/cover;
+      color: white;
+      padding: 32px 20px;
+    }
+
+    .hero-inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 760px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(255,255,255,.90);
+    }
+
+    .layout {
+      width: min(1180px, calc(100% - 28px));
+      margin: -28px auto 42px;
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .filters, .result-card, .compare {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .filters {
+      position: sticky;
+      top: 14px;
+      padding: 16px;
+    }
+
+    .filters h2, .compare h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .field label {
+      color: #344054;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    select, input[type="search"] {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 11px;
+      background: white;
+      color: var(--ink);
+      outline: none;
+    }
+
+    select:focus, input[type="search"]:focus {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, .13);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .chip span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: #344054;
+      cursor: pointer;
+      user-select: none;
+      font-size: 13px;
+    }
+
+    .chip input:checked + span {
+      border-color: rgba(15, 118, 110, .35);
+      background: rgba(15, 118, 110, .10);
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .stat {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 20px;
+      color: var(--brand);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .toolbar .note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .result-card {
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: 170px 1fr;
+      min-width: 0;
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      background: #e7ebf2;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.03);
+    }
+
+    .badge {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      background: rgba(255,255,255,.94);
+      border-radius: 999px;
+      padding: 6px 10px;
+      color: var(--brand-2);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .body {
+      padding: 14px;
+      display: grid;
+      gap: 11px;
+    }
+
+    .title-row {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: start;
+    }
+
+    .title-row h3 {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.35;
+    }
+
+    .score {
+      flex: 0 0 auto;
+      color: #92400e;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 8px;
+      padding: 6px 8px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: #344054;
+      font-size: 13px;
+    }
+
+    .meta span {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      padding: 5px 8px;
+    }
+
+    .specials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .specials span {
+      color: #075985;
+      background: #ecfeff;
+      border: 1px solid #bae6fd;
+      border-radius: 999px;
+      padding: 5px 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .review {
+      margin: 0;
+      color: #475467;
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .menu {
+      border-top: 1px solid #edf0f5;
+      padding-top: 10px;
+      display: grid;
+      gap: 7px;
+    }
+
+    .dish {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: #344054;
+      font-size: 13px;
+    }
+
+    .dish b {
+      color: var(--brand-2);
+      white-space: nowrap;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .btn {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 9px 11px;
+      background: white;
+      color: #344054;
+      cursor: pointer;
+      min-height: 38px;
+    }
+
+    .btn.primary {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: white;
+      font-weight: 800;
+    }
+
+    .btn.active {
+      background: #fff7ed;
+      border-color: #fdba74;
+      color: #9a3412;
+      font-weight: 800;
+    }
+
+    .compare {
+      margin-top: 18px;
+      padding: 16px;
+    }
+
+    .compare-list {
+      display: grid;
+      gap: 9px;
+    }
+
+    .compare-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+
+    .compare-item strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .compare-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .empty {
+      padding: 34px 18px;
+      text-align: center;
+      color: var(--muted);
+      background: white;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+    }
+
+    .source {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .filters {
+        position: static;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .hero {
+        min-height: 32vh;
+        padding: 26px 14px;
+      }
+
+      .layout {
+        width: calc(100% - 20px);
+        margin-top: -18px;
+      }
+
+      .grid, .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .toolbar {
+        align-items: stretch;
+      }
+
+      .toolbar select {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>明珠湖畔 5 公里美食挑选</h1>
+      <p>以合肥市经开区芙蓉路明珠湖畔小区为中心，整理步行、骑行、打车都比较方便的餐厅。评分、价格和评价摘要来自公开网页或待核实参考，适合先筛选再出门。</p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="filters" aria-label="筛选条件">
+      <h2>筛选</h2>
+      <div class="field">
+        <label for="search">搜索店名、菜品、地址</label>
+        <input id="search" type="search" placeholder="例如：羊肉汤、快餐、港澳广场" />
+      </div>
+
+      <div class="field">
+        <label for="distance">距离</label>
+        <select id="distance">
+          <option value="5">5 公里内</option>
+          <option value="2">2 公里内</option>
+          <option value="1">1 公里内</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="budget">人均预算</label>
+        <select id="budget">
+          <option value="999">不限</option>
+          <option value="30">30 元以内</option>
+          <option value="60">60 元以内</option>
+          <option value="100">100 元以内</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>口味类型</label>
+        <div class="chips" id="tagFilters">
+          <label class="chip"><input type="checkbox" value="徽菜"><span>徽菜</span></label>
+          <label class="chip"><input type="checkbox" value="快餐"><span>快餐</span></label>
+          <label class="chip"><input type="checkbox" value="火锅烧烤"><span>火锅烧烤</span></label>
+          <label class="chip"><input type="checkbox" value="聚餐"><span>聚餐</span></label>
+          <label class="chip"><input type="checkbox" value="小吃"><span>小吃</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="sort">排序</label>
+        <select id="sort">
+          <option value="score">评分优先</option>
+          <option value="distance">距离最近</option>
+          <option value="price">人均最低</option>
+          <option value="reviewCount">评价更多</option>
+        </select>
+      </div>
+
+      <div class="source">
+        提醒：大众点评内容可能需要登录且实时变化，本页不直接抓取受限内容。请把它当作出门前的候选清单，价格和营业状态以门店当天为准。
+      </div>
+    </aside>
+
+    <section>
+      <div class="stats">
+        <div class="stat"><strong id="count">0</strong><span>可选餐厅</span></div>
+        <div class="stat"><strong id="avgPrice">-</strong><span>平均人均</span></div>
+        <div class="stat"><strong id="bestScore">-</strong><span>最高评分</span></div>
+      </div>
+
+      <div class="toolbar">
+        <div class="note" id="summary">正在整理候选餐厅</div>
+        <button class="btn" id="clear">清空筛选</button>
+      </div>
+
+      <div class="grid" id="cards"></div>
+      <div class="empty" id="empty" hidden>没有符合条件的餐厅。放宽距离、预算或口味类型试试。</div>
+
+      <div class="compare">
+        <h2>我的对比清单</h2>
+        <div class="compare-list" id="compareList"></div>
+        <div class="empty" id="compareEmpty">点餐厅卡片里的“加入对比”，这里会显示你的候选。</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const restaurants = [
+      {
+        id: "dingli-furong",
+        name: "丁里羊肉小镇（芙蓉路店）",
+        area: "芙蓉路 475 号，近宝塔路",
+        distance: 1.2,
+        price: 87,
+        score: 4.1,
+        reviewCount: 10,
+        tags: ["徽菜", "火锅烧烤", "聚餐"],
+        source: "携程公开页面",
+        image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=82",
+        specials: ["羊肉汤", "手抓羊排", "孜然羊肉", "羊蝎子"],
+        dishes: [
+          ["羊肉汤小碗", "约 18-28 元"],
+          ["孜然羊肉", "约 48-68 元"],
+          ["手抓羊排", "约 88-128 元"]
+        ],
+        review: "公开评价提到萧县羊肉、羊肉汤、羊排类菜品，适合想吃热汤和肉菜的晚餐或多人聚餐。"
+      },
+      {
+        id: "laoxiangji-cuiwei",
+        name: "老乡鸡（翠微路店）",
+        area: "翠微路与石鼓路附近，芙蓉新天地",
+        distance: 1.6,
+        price: 16,
+        score: 3.0,
+        reviewCount: 5,
+        tags: ["快餐", "徽菜"],
+        source: "携程公开页面",
+        image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=82",
+        specials: ["肥西老母鸡汤", "葱油鸡", "鸡汤娃娃菜", "农家小炒肉"],
+        dishes: [
+          ["金牌鸡汤", "约 12-18 元"],
+          ["农家小炒肉套餐", "约 20-30 元"],
+          ["特色鸡汤馄饨", "约 12-20 元"]
+        ],
+        review: "连锁快餐，优点是稳定、快、便宜，适合一个人解决工作餐或不想排队的时候。"
+      },
+      {
+        id: "hangongyan-zhonghuan",
+        name: "韩宫宴烤肉·黑毛和牛·料理（合肥中环城店）",
+        area: "繁华大道 12167 号中环购物中心 3 层",
+        distance: 2.9,
+        price: 87,
+        score: 4.9,
+        reviewCount: 13,
+        tags: ["火锅烧烤", "聚餐"],
+        source: "携程公开页面",
+        image: "https://images.unsplash.com/photo-1590593162201-f67611a18b87?auto=format&fit=crop&w=900&q=82",
+        specials: ["薄切牛舌", "和牛牛小排", "石锅拌饭", "宫廷果香猪排"],
+        dishes: [
+          ["薄切牛舌", "单点价待核实"],
+          ["韩宫宴特色石锅拌饭", "单点价待核实"],
+          ["双人烤肉套餐", "以门店团购为准"]
+        ],
+        review: "公开页面评分较高，评价提到烤肉新鲜、团购划算。适合想吃肉、两三人聚餐。"
+      },
+      {
+        id: "dongbeizao-zhonghuan",
+        name: "东北灶（中环店）",
+        area: "繁华大道 12167 号中环购物中心 3 层",
+        distance: 2.9,
+        price: 55,
+        score: 4.2,
+        reviewCount: 0,
+        tags: ["聚餐", "徽菜"],
+        source: "永安旅游公开页面",
+        image: "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=82",
+        specials: ["锅包肉", "东北大拉皮", "地三鲜", "铁锅炖"],
+        dishes: [
+          ["锅包肉", "约 38-58 元"],
+          ["东北大拉皮", "约 22-36 元"],
+          ["铁锅炖", "约 98-168 元"]
+        ],
+        review: "明确门店在中环城 3 层，适合想吃分量足、偏家常重口的东北菜。具体菜价需到店核实。"
+      },
+      {
+        id: "shangpingong-furong",
+        name: "尚品宫自助烤肉（翡翠路芙蓉路店）",
+        area: "翡翠路与芙蓉路交口北约 50 米",
+        distance: 1.7,
+        price: 44,
+        score: 4.0,
+        reviewCount: 0,
+        tags: ["火锅烧烤", "聚餐"],
+        source: "公开榜单参考",
+        image: "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=82",
+        specials: ["纸上烤肉", "自助肉类", "海鲜蔬菜", "冰淇淋饮料"],
+        dishes: [
+          ["自助烤肉单人", "约 44 元"],
+          ["肉类/海鲜/蔬菜", "自助供应"],
+          ["水果饮料冰淇淋", "通常含在自助内"]
+        ],
+        review: "公开资料称性价比较高，肉类品质和酱料口感是主要卖点。适合预算有限又想吃烤肉。"
+      },
+      {
+        id: "chaogang-gangao",
+        name: "超港·蛋糕面包（港澳广场店）",
+        area: "翡翠路与金炉路交叉口西南角港澳广场 B 区 B1",
+        distance: 1.5,
+        price: 44,
+        score: 4.6,
+        reviewCount: 451,
+        tags: ["小吃"],
+        source: "携程公开页面",
+        image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=82",
+        specials: ["泡芙", "黄山烧饼", "青提芝士蛋糕", "手撕包"],
+        dishes: [
+          ["泡芙", "约 6-18 元"],
+          ["黄山烧饼", "约 10-25 元"],
+          ["生日/乳脂蛋糕", "约 88 元起"]
+        ],
+        review: "不是正餐店，但适合买早餐、下午茶和伴手礼。公开评价里多次提到泡芙和蛋糕。"
+      },
+      {
+        id: "laoxiangji-gangao",
+        name: "老乡鸡（港澳广场店）",
+        area: "翡翠路 188 号港澳广场 F1",
+        distance: 1.5,
+        price: 20,
+        score: 3.6,
+        reviewCount: 0,
+        tags: ["快餐", "徽菜"],
+        source: "公开地图页面",
+        image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=900&q=82",
+        specials: ["老乡鸡金牌鸡汤", "葱油鸡", "鸡汤娃娃菜", "农家小炒肉"],
+        dishes: [
+          ["金牌鸡汤", "约 12-18 元"],
+          ["葱油鸡套餐", "约 22-35 元"],
+          ["小炒肉套餐", "约 22-35 元"]
+        ],
+        review: "比翠微路店更靠港澳广场，适合快捷吃饭。评分和菜价请以美团/大众点评当天页面为准。"
+      },
+      {
+        id: "kfc-gangao",
+        name: "肯德基（港澳广场餐厅）",
+        area: "港澳广场购物中心内",
+        distance: 1.5,
+        price: 35,
+        score: 3.8,
+        reviewCount: 0,
+        tags: ["快餐", "小吃"],
+        source: "公开地图页面",
+        image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=82",
+        specials: ["原味鸡", "香辣鸡腿堡", "蛋挞", "早餐套餐"],
+        dishes: [
+          ["汉堡套餐", "约 30-45 元"],
+          ["蛋挞", "约 8-12 元"],
+          ["早餐套餐", "约 15-30 元"]
+        ],
+        review: "标准连锁快餐，优点是稳定、出餐快、儿童友好，适合不知道吃什么时兜底。"
+      }
+    ];
+
+    const state = {
+      selected: new Set()
+    };
+
+    const els = {
+      search: document.getElementById("search"),
+      distance: document.getElementById("distance"),
+      budget: document.getElementById("budget"),
+      sort: document.getElementById("sort"),
+      cards: document.getElementById("cards"),
+      empty: document.getElementById("empty"),
+      count: document.getElementById("count"),
+      avgPrice: document.getElementById("avgPrice"),
+      bestScore: document.getElementById("bestScore"),
+      summary: document.getElementById("summary"),
+      clear: document.getElementById("clear"),
+      compareList: document.getElementById("compareList"),
+      compareEmpty: document.getElementById("compareEmpty"),
+      tagFilters: document.getElementById("tagFilters")
+    };
+
+    function selectedTags() {
+      return Array.from(els.tagFilters.querySelectorAll("input:checked")).map(input => input.value);
+    }
+
+    function matchesSearch(item, query) {
+      if (!query) return true;
+      const haystack = [
+        item.name,
+        item.area,
+        item.tags.join(" "),
+        item.specials.join(" "),
+        item.dishes.map(dish => dish.join(" ")).join(" ")
+      ].join(" ").toLowerCase();
+      return haystack.includes(query.toLowerCase());
+    }
+
+    function filteredRestaurants() {
+      const maxDistance = Number(els.distance.value);
+      const maxBudget = Number(els.budget.value);
+      const tags = selectedTags();
+      const query = els.search.value.trim();
+
+      const list = restaurants.filter(item => {
+        const tagOk = tags.length === 0 || tags.some(tag => item.tags.includes(tag));
+        return item.distance <= maxDistance &&
+          item.price <= maxBudget &&
+          tagOk &&
+          matchesSearch(item, query);
+      });
+
+      const sortBy = els.sort.value;
+      list.sort((a, b) => {
+        if (sortBy === "distance") return a.distance - b.distance;
+        if (sortBy === "price") return a.price - b.price;
+        if (sortBy === "reviewCount") return b.reviewCount - a.reviewCount;
+        return b.score - a.score || b.reviewCount - a.reviewCount;
+      });
+      return list;
+    }
+
+    function renderStats(list) {
+      els.count.textContent = String(list.length);
+      els.avgPrice.textContent = list.length ? `¥${Math.round(list.reduce((sum, item) => sum + item.price, 0) / list.length)}` : "-";
+      els.bestScore.textContent = list.length ? Math.max(...list.map(item => item.score)).toFixed(1) : "-";
+      els.summary.textContent = list.length
+        ? `当前显示 ${list.length} 家，按${els.sort.options[els.sort.selectedIndex].textContent}排列。`
+        : "当前没有符合条件的餐厅。";
+    }
+
+    function cardTemplate(item) {
+      const dishes = item.dishes.map(dish => `<div class="dish"><span>${dish[0]}</span><b>${dish[1]}</b></div>`).join("");
+      const active = state.selected.has(item.id);
+      return `
+        <article class="result-card">
+          <div class="photo">
+            <img src="${item.image}" alt="${item.name}参考图片" loading="lazy">
+            <span class="badge">${item.source}</span>
+          </div>
+          <div class="body">
+            <div class="title-row">
+              <h3>${item.name}</h3>
+              <div class="score">${item.score.toFixed(1)} 分</div>
+            </div>
+            <div class="meta">
+              <span>${item.distance.toFixed(1)} 公里</span>
+              <span>人均 ¥${item.price}</span>
+              <span>${item.reviewCount} 条参考评价</span>
+            </div>
+            <div class="specials">${item.specials.map(name => `<span>${name}</span>`).join("")}</div>
+            <p class="review">${item.review}</p>
+            <div class="menu">${dishes}</div>
+            <div class="actions">
+              <span class="review">${item.area}</span>
+              <button class="btn ${active ? "active" : "primary"}" data-toggle="${item.id}">${active ? "已加入" : "加入对比"}</button>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderCards() {
+      const list = filteredRestaurants();
+      renderStats(list);
+      els.cards.innerHTML = list.map(cardTemplate).join("");
+      els.empty.hidden = list.length > 0;
+    }
+
+    function renderCompare() {
+      const selected = restaurants.filter(item => state.selected.has(item.id));
+      els.compareEmpty.hidden = selected.length > 0;
+      els.compareList.innerHTML = selected.map(item => `
+        <div class="compare-item">
+          <div>
+            <strong>${item.name}</strong>
+            <span>${item.distance.toFixed(1)} 公里 · 人均 ¥${item.price} · ${item.specials.slice(0, 2).join("、")}</span>
+          </div>
+          <button class="btn" data-remove="${item.id}">移除</button>
+        </div>
+      `).join("");
+    }
+
+    function render() {
+      renderCards();
+      renderCompare();
+    }
+
+    ["input", "change"].forEach(eventName => {
+      els.search.addEventListener(eventName, renderCards);
+      els.distance.addEventListener(eventName, renderCards);
+      els.budget.addEventListener(eventName, renderCards);
+      els.sort.addEventListener(eventName, renderCards);
+      els.tagFilters.addEventListener(eventName, renderCards);
+    });
+
+    document.addEventListener("click", event => {
+      const toggleId = event.target.closest("[data-toggle]")?.dataset.toggle;
+      const removeId = event.target.closest("[data-remove]")?.dataset.remove;
+
+      if (toggleId) {
+        state.selected.has(toggleId) ? state.selected.delete(toggleId) : state.selected.add(toggleId);
+        render();
+      }
+
+      if (removeId) {
+        state.selected.delete(removeId);
+        render();
+      }
+    });
+
+    els.clear.addEventListener("click", () => {
+      els.search.value = "";
+      els.distance.value = "5";
+      els.budget.value = "999";
+      els.sort.value = "score";
+      els.tagFilters.querySelectorAll("input").forEach(input => input.checked = false);
+      renderCards();
+    });
+
+    render();
+  </script>
+</body>
+</html>

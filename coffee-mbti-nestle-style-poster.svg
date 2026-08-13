@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0f7"/>
+      <stop offset="0.45" stop-color="#ffc6df"/>
+      <stop offset="1" stop-color="#fff8fb"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#ffe3ef" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f6e6d5"/>
+      <stop offset="1" stop-color="#b9794c"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#d54c85" flood-opacity="0.24"/>
+    </filter>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1440" fill="url(#bg)"/>
+  <path d="M0 180 C220 60 390 120 550 210 C710 300 850 230 1080 90 L1080 0 L0 0 Z" fill="#ffffff" opacity="0.42"/>
+  <path d="M0 1190 C200 1090 350 1120 530 1208 C740 1310 880 1240 1080 1120 L1080 1440 L0 1440 Z" fill="#ffffff" opacity="0.55"/>
+  <circle cx="850" cy="492" r="260" fill="#ffffff" opacity="0.34" filter="url(#glow)"/>
+  <circle cx="210" cy="1010" r="150" fill="#ffffff" opacity="0.3" filter="url(#glow)"/>
+
+  <path d="M382 0 H698 V154 C610 186 470 186 382 154 Z" fill="#d93679"/>
+  <text x="540" y="68" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="48" font-weight="800" fill="#ffffff">Nestlé</text>
+  <text x="540" y="128" text-anchor="middle" font-family="Microsoft YaHei, Arial, sans-serif" font-size="38" font-weight="900" fill="#ffffff">校园咖啡计划</text>
+
+  <text x="540" y="268" text-anchor="middle" font-family="Microsoft YaHei, Arial, sans-serif" font-size="42" font-weight="800" fill="#a41f58">- 咖啡人格探索季 -</text>
+  <text x="540" y="372" text-anchor="middle" font-family="Microsoft YaHei, Arial, sans-serif" font-size="86" font-weight="900" fill="#8f174c">咖啡MBTI</text>
+  <text x="540" y="462" text-anchor="middle" font-family="Microsoft YaHei, Arial, sans-serif" font-size="76" font-weight="900" fill="#8f174c">校园测试</text>
+
+  <rect x="178" y="510" width="724" height="86" rx="20" fill="#e64f91"/>
+  <text x="540" y="568" text-anchor="middle" font-family="Microsoft YaHei, Arial, sans-serif" font-size="45" font-weight="900" fill="#ffffff">找到你的咖啡人格！</text>
+
+  <rect x="120" y="650" width="840" height="530" rx="52" fill="url(#panel)" stroke="#ff9dc3" stroke-width="8" filter="url(#softShadow)"/>
+  <ellipse cx="540" cy="1136" rx="265" ry="32" fill="#e64f91" opacity="0.18"/>
+
+  <path d="M388 816 C398 760 444 724 540 724 C636 724 682 760 692 816 L656 1028 C648 1078 604 1110 540 1110 C476 1110 432 1078 424 1028 Z" fill="url(#cup)" stroke="#b42a65" stroke-width="8"/>
+  <path d="M690 848 C788 856 796 990 676 998" fill="none" stroke="#b42a65" stroke-width="20" stroke-linecap="round"/>
+  <ellipse cx="540" cy="818" rx="153" ry="42" fill="#fffaf5" stroke="#b42a65" stroke-width="8"/>
+  <ellipse cx="540" cy="818" rx="112" ry="25" fill="#8b4f2e" opacity="0.82"/>
+  <path d="M476 685 C455 650 507 626 489 588" stroke="#ffffff" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <path d="M540 685 C519 642 586 628 562 580" stroke="#ffffff" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <path d="M606 685 C584 650 638 628 620 590" stroke="#ffffff" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <text x="540" y="936" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="44" font-weight="900" fill="#a41f58">COFFEE</text>
+  <text x="540" y="992" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="52" font-weight="900" fill="#a41f58">MBTI</text>
+
+  <g font-family="Microsoft YaHei, Arial, sans-serif" font-weight="900" fill="#9d2358">
+    <circle cx="245" cy="755" r="76" fill="#ffffff" stroke="#ffb0d0" stroke-width="8"/>
+    <text x="245" y="744" text-anchor="middle" font-size="31">线上</text>
+    <text x="245" y="785" text-anchor="middle" font-size="31">测试</text>
+    <circle cx="838" cy="780" r="80" fill="#ffffff" stroke="#ffb0d0" stroke-width="8"/>
+    <text x="838" y="768" text-anchor="middle" font-size="30">盲盒</text>
+    <text x="838" y="808" text-anchor="middle" font-size="30">冲泡</text>
+    <circle cx="235" cy="1015" r="78" fill="#ffffff" stroke="#ffb0d0" stroke-width="8"/>
+    <text x="235" y="1004" text-anchor="middle" font-size="28">转发</text>
+    <text x="235" y="1042" text-anchor="middle" font-size="28">领试饮</text>
+    <circle cx="842" cy="1026" r="76" fill="#ffffff" stroke="#ffb0d0" stroke-width="8"/>
+    <text x="842" y="1014" text-anchor="middle" font-size="28">打卡</text>
+    <text x="842" y="1052" text-anchor="middle" font-size="28">赢好礼</text>
+  </g>
+
+  <rect x="188" y="1238" width="704" height="86" rx="28" fill="#ffffff" stroke="#ff9dc3" stroke-width="6"/>
+  <text x="540" y="1295" text-anchor="middle" font-family="Microsoft YaHei, Arial, sans-serif" font-size="41" font-weight="900" fill="#b42a65">扫码参与 解锁专属咖啡人格</text>
+  <text x="540" y="1365" text-anchor="middle" font-family="Microsoft YaHei, Arial, sans-serif" font-size="30" font-weight="800" fill="#a94a72">校园限定活动｜测试转发领试饮｜盲盒冲泡实验室</text>
+</svg>

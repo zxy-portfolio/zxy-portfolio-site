@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2200" viewBox="0 0 1600 2200">
+  <defs>
+    <style>
+      .bg { fill: #f7fbf8; }
+      .ink { fill: #1e2c2a; }
+      .muted { fill: #5e6d68; }
+      .green { fill: #1fae7a; }
+      .deep { fill: #0e7c66; }
+      .blue { fill: #6ab7ff; }
+      .softBlue { fill: #eaf6ff; }
+      .softGreen { fill: #eafaf3; }
+      .softYellow { fill: #fff6d7; }
+      .softPink { fill: #fff0f3; }
+      .white { fill: #ffffff; }
+      .line { stroke: #1e2c2a; stroke-width: 5; }
+      .thin { stroke: #c8d8d2; stroke-width: 3; }
+      .dash { stroke: #1fae7a; stroke-width: 4; stroke-dasharray: 12 12; }
+      text { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; letter-spacing: 0; }
+      .en { font-family: Arial, sans-serif; font-weight: 900; letter-spacing: 1px; }
+      .title { font-size: 72px; font-weight: 900; }
+      .subtitle { font-size: 28px; font-weight: 800; }
+      .nav { font-size: 24px; font-weight: 900; }
+      .h2 { font-size: 40px; font-weight: 900; }
+      .h3 { font-size: 28px; font-weight: 900; }
+      .body { font-size: 22px; font-weight: 760; }
+      .small { font-size: 18px; font-weight: 760; }
+      .tiny { font-size: 15px; font-weight: 760; }
+      .shadow { filter: drop-shadow(8px 8px 0 rgba(30, 44, 42, 1)); }
+    </style>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#d7ebe3" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <rect class="bg" width="1600" height="2200"/>
+  <rect width="1600" height="2200" fill="url(#grid)" opacity="0.45"/>
+  <circle cx="1320" cy="166" r="142" fill="#d9fff0"/>
+  <circle cx="150" cy="1990" r="190" fill="#eaf6ff"/>
+
+  <rect x="70" y="74" width="1460" height="2052" rx="42" class="white line shadow"/>
+
+  <g transform="translate(112 110)">
+    <g>
+      <rect x="0" y="0" width="112" height="112" rx="24" fill="#eafaf3" class="line"/>
+      <path d="M30 74c18-40 40-58 64-63-7 24-26 48-64 63Z" fill="#1fae7a" stroke="#1e2c2a" stroke-width="5"/>
+      <path d="M32 78c26-8 49-7 70 4-20 17-45 19-70-4Z" fill="#6ab7ff" stroke="#1e2c2a" stroke-width="5"/>
+    </g>
+    <text x="142" y="48" class="en" font-size="26" fill="#0e7c66">COMPETITOR ANALYSIS</text>
+    <text x="142" y="118" class="title ink">新东方竞品分析与市场调研</text>
+    <text x="145" y="166" class="subtitle muted">校园活动获客 / 家长私域转化 / 教育品牌内容营销</text>
+
+    <g transform="translate(770 8)">
+      <rect x="0" y="0" width="574" height="54" rx="12" fill="#eafaf3"/>
+      <rect x="210" y="0" width="138" height="54" rx="12" fill="#1fae7a"/>
+      <text x="24" y="35" class="nav deep">企业介绍</text>
+      <text x="143" y="35" class="nav deep">市场分析</text>
+      <text x="232" y="35" class="nav" fill="#fff">竞品分析</text>
+      <text x="373" y="35" class="nav deep">推广策略</text>
+    </g>
+  </g>
+
+  <g transform="translate(112 320)">
+    <text x="0" y="0" class="h2 ink">一、竞品分析矩阵</text>
+    <text x="0" y="42" class="small muted">对比对象选取：学而思 / 猿辅导 / 作业帮 / 高途，均在 K12、素养、智能学习或在线服务中与新东方形成竞争。</text>
+
+    <g transform="translate(0 92)">
+      <g class="body">
+        <rect x="0" y="54" width="160" height="58" rx="14" fill="#d9fff0" class="line"/>
+        <text x="32" y="92" class="ink">产品类型</text>
+        <rect x="0" y="162" width="160" height="58" rx="14" fill="#eaf6ff" class="line"/>
+        <text x="32" y="200" class="ink">目标人群</text>
+        <rect x="0" y="270" width="160" height="58" rx="14" fill="#fff6d7" class="line"/>
+        <text x="32" y="308" class="ink">获客方式</text>
+        <rect x="0" y="378" width="160" height="58" rx="14" fill="#fff0f3" class="line"/>
+        <text x="32" y="416" class="ink">竞争短板</text>
+        <rect x="0" y="486" width="160" height="58" rx="14" fill="#eafaf3" class="line"/>
+        <text x="32" y="524" class="ink">运营启发</text>
+      </g>
+
+      <g transform="translate(190 0)">
+        <rect width="275" height="610" rx="55" fill="#ffffff" class="line"/>
+        <text x="62" y="56" class="h3 ink">学而思</text>
+        <text x="64" y="90" class="small green">素养 + 智能学习</text>
+        <text x="34" y="146" class="body muted">素养课、学习机、</text>
+        <text x="34" y="178" class="body muted">线上线下融合服务</text>
+        <text x="34" y="254" class="body muted">K12 学生与高关注度</text>
+        <text x="34" y="286" class="body muted">教育家庭</text>
+        <text x="34" y="362" class="body muted">内容 IP、社群体验课、</text>
+        <text x="34" y="394" class="body muted">学习规划转化</text>
+        <text x="34" y="470" class="body muted">价格与服务深度较高，</text>
+        <text x="34" y="502" class="body muted">低门槛活动感不足</text>
+        <text x="34" y="578" class="body muted">用轻活动做入口，</text>
+        <text x="34" y="610" class="body muted">承接进阶咨询</text>
+      </g>
+
+      <g transform="translate(495 0)">
+        <rect width="275" height="610" rx="55" fill="#ffffff" class="line"/>
+        <text x="62" y="56" class="h3 ink">猿辅导</text>
+        <text x="55" y="90" class="small green">在线学习 + 硬件</text>
+        <text x="34" y="146" class="body muted">在线课程、智能硬件、</text>
+        <text x="34" y="178" class="body muted">作业辅导场景</text>
+        <text x="34" y="254" class="body muted">学生端使用频次高，</text>
+        <text x="34" y="286" class="body muted">家长决策参与强</text>
+        <text x="34" y="362" class="body muted">App 流量、题库工具、</text>
+        <text x="34" y="394" class="body muted">算法推荐</text>
+        <text x="34" y="470" class="body muted">线下信任和校园触点</text>
+        <text x="34" y="502" class="body muted">相对不足</text>
+        <text x="34" y="578" class="body muted">线下公益场景可补</text>
+        <text x="34" y="610" class="body muted">信任与温度</text>
+      </g>
+
+      <g transform="translate(800 0)">
+        <rect width="275" height="610" rx="55" fill="#ffffff" class="line"/>
+        <text x="62" y="56" class="h3 ink">作业帮</text>
+        <text x="58" y="90" class="small green">工具流量 + 硬件</text>
+        <text x="34" y="146" class="body muted">搜题工具、学习机、</text>
+        <text x="34" y="178" class="body muted">学习资料服务</text>
+        <text x="34" y="254" class="body muted">注重效率的学生，</text>
+        <text x="34" y="286" class="body muted">以及陪学家长</text>
+        <text x="34" y="362" class="body muted">工具入口、资料包、</text>
+        <text x="34" y="394" class="body muted">福利裂变</text>
+        <text x="34" y="470" class="body muted">品牌陪伴感弱，</text>
+        <text x="34" y="502" class="body muted">线下转化链路短</text>
+        <text x="34" y="578" class="body muted">高分笔记可作为</text>
+        <text x="34" y="610" class="body muted">强福利钩子</text>
+      </g>
+
+      <g transform="translate(1105 0)">
+        <rect width="275" height="610" rx="55" fill="#ffffff" class="line"/>
+        <text x="86" y="56" class="h3 ink">高途</text>
+        <text x="56" y="90" class="small green">直播课 + 规划</text>
+        <text x="34" y="146" class="body muted">在线大班课、规划课、</text>
+        <text x="34" y="178" class="body muted">直播转化链路</text>
+        <text x="34" y="254" class="body muted">升学压力较强的</text>
+        <text x="34" y="286" class="body muted">家长群体</text>
+        <text x="34" y="362" class="body muted">直播投放、名师背书、</text>
+        <text x="34" y="394" class="body muted">限时福利</text>
+        <text x="34" y="470" class="body muted">活动趣味性较弱，</text>
+        <text x="34" y="502" class="body muted">线下体验有限</text>
+        <text x="34" y="578" class="body muted">用线下活动降低</text>
+        <text x="34" y="610" class="body muted">硬广排斥感</text>
+      </g>
+    </g>
+  </g>
+
+  <line x1="74" y1="1110" x2="1530" y2="1110" stroke="#d7ebe3" stroke-width="18"/>
+
+  <g transform="translate(112 1190)">
+    <g>
+      <rect x="0" y="0" width="112" height="112" rx="24" fill="#eaf6ff" class="line"/>
+      <path d="M26 74h60c14 0 25-11 25-25S100 24 86 24H48c-16 0-29 13-29 29v4c0 10 3 16 7 17Z" fill="#6ab7ff" stroke="#1e2c2a" stroke-width="5"/>
+      <circle cx="57" cy="50" r="6" fill="#1e2c2a"/>
+      <circle cx="86" cy="50" r="6" fill="#1e2c2a"/>
+    </g>
+    <text x="142" y="48" class="en" font-size="26" fill="#0e7c66">MARKET RESEARCH</text>
+    <text x="142" y="116" class="title ink" font-size="62">新东方校园市场调研</text>
+    <text x="145" y="162" class="subtitle muted">围绕“校园运动会 + 跳蚤市场”的线下获客场景设计</text>
+
+    <g transform="translate(0 230)">
+      <rect width="1360" height="250" rx="30" fill="#eafaf3" class="line"/>
+      <text x="34" y="58" class="h2 ink">核心用户洞察</text>
+      <text x="34" y="110" class="body muted">学生：喜欢低门槛互动、文具福利、二手教辅和有参与感的校园摊位。</text>
+      <text x="34" y="154" class="body muted">家长：关注优质学习资料、升学规划、真实案例和可信赖的教育服务。</text>
+      <text x="34" y="198" class="body muted">机会点：把“公益义卖 + 高分笔记 + 免费择校报告”组合成低压、可信、可转化的获客链路。</text>
+    </g>
+
+    <g transform="translate(0 535)">
+      <text x="0" y="0" class="h2 ink">二、推广策略设计</text>
+      <text x="0" y="42" class="small muted">参考图下半部分结构，将线上种草与线下触达拆分为两条路径。</text>
+
+      <g transform="translate(0 86)">
+        <rect width="650" height="420" rx="30" fill="#ffffff" class="line"/>
+        <text x="34" y="62" class="h2 ink">线上推广</text>
+        <text x="34" y="116" class="body muted">1. 发布运动会福利海报，突出闯关游戏与文具礼包。</text>
+        <text x="34" y="164" class="body muted">2. 跳蚤市场预热：高分笔记、公益义卖、择校报告。</text>
+        <text x="34" y="212" class="body muted">3. 家长进群后按年级和升学意向打标签。</text>
+        <text x="34" y="260" class="body muted">4. 社群连续推送学习资料、活动回顾和咨询入口。</text>
+        <text x="34" y="330" class="h3 green">目标：从内容曝光转向私域沉淀</text>
+      </g>
+
+      <g transform="translate(710 86)">
+        <rect width="650" height="420" rx="30" fill="#ffffff" class="line"/>
+        <text x="34" y="62" class="h2 ink">线下推广</text>
+        <text x="34" y="116" class="body muted">1. 运动会设置闯关摊位，吸引学生自然聚集。</text>
+        <text x="34" y="164" class="body muted">2. 跳蚤市场设置二手教辅区与公益义卖区。</text>
+        <text x="34" y="212" class="body muted">3. 用纸质择校报告与高分笔记引导家长扫码。</text>
+        <text x="34" y="260" class="body muted">4. 现场标记高意向客户，后续安排 1v1 咨询。</text>
+        <text x="34" y="330" class="h3 green">目标：从活动人流转向咨询线索</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(112 1955)">
+    <rect width="1360" height="90" rx="28" fill="#1e2c2a"/>
+    <text x="34" y="38" class="h3" fill="#d9fff0">结论</text>
+    <text x="128" y="38" class="body" fill="#ffffff">新东方适合用“公益场景 + 学习资料福利 + 升学咨询承接”避开单纯低价竞争，建立家长信任。</text>
+    <text x="128" y="70" class="small" fill="#c8d8d2">运营重点：前期预热、现场扫码、社群分层、咨询转化、复盘 SOP。</text>
+  </g>
+
+  <g transform="translate(112 2078)">
+    <text x="0" y="0" class="tiny muted">资料参考：新东方 FY2026 Q1/Q2 财报；教育行业公开报道；竞品定位为作品集运营分析用途。</text>
+  </g>
+</svg>

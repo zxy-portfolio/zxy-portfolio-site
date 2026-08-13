@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2200" viewBox="0 0 1600 2200">
+  <defs>
+    <style>
+      .bg { fill: #fff7ec; }
+      .ink { fill: #2d2630; }
+      .muted { fill: #6e5f64; }
+      .brown { fill: #5b3827; }
+      .cream { fill: #fffdf8; }
+      .pink { fill: #ff7dac; }
+      .peach { fill: #ffb36b; }
+      .mint { fill: #66d7b5; }
+      .sky { fill: #72b7ff; }
+      .lemon { fill: #ffe66d; }
+      .line { stroke: #2d2630; stroke-width: 5; }
+      .dash { stroke: #2d2630; stroke-width: 4; stroke-dasharray: 12 12; }
+      .thin { stroke: #2d2630; stroke-width: 3; }
+      text { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; letter-spacing: 0; }
+      .en { font-family: Arial, sans-serif; font-weight: 900; letter-spacing: 1px; }
+      .title { font-size: 74px; font-weight: 900; }
+      .subtitle { font-size: 28px; font-weight: 700; }
+      .h2 { font-size: 38px; font-weight: 900; }
+      .h3 { font-size: 27px; font-weight: 900; }
+      .body { font-size: 23px; font-weight: 700; }
+      .small { font-size: 18px; font-weight: 700; }
+      .tiny { font-size: 15px; font-weight: 700; }
+      .card { fill: #ffffff; stroke: #2d2630; stroke-width: 5; }
+      .soft { filter: drop-shadow(8px 8px 0 rgba(45, 38, 48, 1)); }
+    </style>
+    <pattern id="dots" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="4" fill="#ffb36b" opacity="0.32"/>
+    </pattern>
+  </defs>
+
+  <rect class="bg" width="1600" height="2200"/>
+  <rect width="1600" height="2200" fill="url(#dots)"/>
+  <circle cx="1310" cy="170" r="155" fill="#ffe66d" opacity="0.64"/>
+  <circle cx="200" cy="2000" r="210" fill="#ff7dac" opacity="0.20"/>
+  <circle cx="1460" cy="1940" r="170" fill="#66d7b5" opacity="0.30"/>
+
+  <rect x="74" y="76" width="1452" height="2048" rx="42" class="card soft"/>
+
+  <g transform="translate(112 116)">
+    <rect x="0" y="0" width="1376" height="315" rx="34" fill="#5b3827" class="line"/>
+    <circle cx="1180" cy="88" r="52" class="lemon line"/>
+    <path d="M1203 62c42 10 67 40 72 85" fill="none" stroke="#ff7dac" stroke-width="14" stroke-linecap="round"/>
+    <text x="54" y="78" fill="#ffe66d" class="en small">COMPETITOR ANALYSIS &amp; MARKET RESEARCH</text>
+    <text x="52" y="163" fill="#fffdf8" class="title">雀巢咖啡校园增长洞察</text>
+    <text x="54" y="220" fill="#ffd8bd" class="subtitle">NESCAFE CAMPUS COFFEE INSIGHT · Coffee MBTI Campaign</text>
+    <text x="54" y="270" fill="#fffdf8" class="body">目标：用“趣味测试 + 线下盲盒冲泡”降低品牌抵触，沉淀学生私域并推动试饮转化</text>
+  </g>
+
+  <g transform="translate(112 480)">
+    <text x="0" y="0" class="h2 ink">01 Market Signals</text>
+    <text x="0" y="42" class="small muted">市场信号：便利化、年轻化、社交化正在重塑校园咖啡场景</text>
+
+    <g transform="translate(0 82)">
+      <rect width="425" height="230" rx="26" fill="#fff4cd" class="line"/>
+      <text x="30" y="64" class="en" font-size="54" fill="#5b3827">63.61%</text>
+      <text x="30" y="112" class="h3 ink">Instant still matters</text>
+      <text x="30" y="152" class="body muted">2025 年中国咖啡市场中，</text>
+      <text x="30" y="188" class="body muted">速溶咖啡仍占重要份额。</text>
+    </g>
+
+    <g transform="translate(475 82)">
+      <rect width="425" height="230" rx="26" fill="#eaf8ff" class="line"/>
+      <text x="30" y="64" class="en" font-size="54" fill="#1f5d86">$1.47B</text>
+      <text x="30" y="112" class="h3 ink">RTD convenience</text>
+      <text x="30" y="152" class="body muted">中国即饮咖啡 2025 规模</text>
+      <text x="30" y="188" class="body muted">约 14.7 亿美元，便利场景强。</text>
+    </g>
+
+    <g transform="translate(950 82)">
+      <rect width="425" height="230" rx="26" fill="#ffeaf3" class="line"/>
+      <text x="30" y="64" class="en" font-size="54" fill="#c44776">18-25</text>
+      <text x="30" y="112" class="h3 ink">Student core</text>
+      <text x="30" y="152" class="body muted">雀巢咖啡长期重视大学生</text>
+      <text x="30" y="188" class="body muted">这一年轻核心人群。</text>
+    </g>
+  </g>
+
+  <g transform="translate(112 860)">
+    <text x="0" y="0" class="h2 ink">02 Competitor Map</text>
+    <text x="0" y="42" class="small muted">竞品格局：雀巢的优势是便利与渠道，挑战来自现制体验、社交空间和精品化表达</text>
+
+    <g transform="translate(0 86)">
+      <rect width="1376" height="492" rx="30" fill="#ffffff" class="line"/>
+      <line x1="0" y1="86" x2="1376" y2="86" class="thin"/>
+      <line x1="275" y1="0" x2="275" y2="492" class="thin"/>
+      <line x1="565" y1="0" x2="565" y2="492" class="thin"/>
+      <line x1="855" y1="0" x2="855" y2="492" class="thin"/>
+      <line x1="1110" y1="0" x2="1110" y2="492" class="thin"/>
+      <text x="32" y="55" class="h3 ink">Brand</text>
+      <text x="305" y="55" class="h3 ink">Main appeal</text>
+      <text x="595" y="55" class="h3 ink">Campus scene</text>
+      <text x="885" y="55" class="h3 ink">Weakness</text>
+      <text x="1138" y="55" class="h3 ink">Implication</text>
+
+      <g class="body">
+        <text x="32" y="135" class="brown">NESCAFE</text>
+        <text x="305" y="135" class="muted">便利 / 价格友好</text>
+        <text x="595" y="135" class="muted">宿舍、备考、社团</text>
+        <text x="885" y="135" class="muted">体验感偏弱</text>
+        <text x="1138" y="122" class="muted">用互动活动补足</text>
+        <text x="1138" y="154" class="muted">社交和记忆点</text>
+
+        <line x1="0" y1="176" x2="1376" y2="176" class="thin"/>
+        <text x="32" y="225" class="brown">Luckin</text>
+        <text x="305" y="225" class="muted">高频现制 / 低价</text>
+        <text x="595" y="225" class="muted">课间、外卖、拼单</text>
+        <text x="885" y="225" class="muted">同质化促销</text>
+        <text x="1138" y="212" class="muted">避开价格战，做</text>
+        <text x="1138" y="244" class="muted">差异化玩法</text>
+
+        <line x1="0" y1="266" x2="1376" y2="266" class="thin"/>
+        <text x="32" y="315" class="brown">Starbucks</text>
+        <text x="305" y="315" class="muted">空间 / 品牌心智</text>
+        <text x="595" y="315" class="muted">社交、学习、打卡</text>
+        <text x="885" y="315" class="muted">价格门槛高</text>
+        <text x="1138" y="302" class="muted">用轻量打卡创造</text>
+        <text x="1138" y="334" class="muted">低门槛社交</text>
+
+        <line x1="0" y1="356" x2="1376" y2="356" class="thin"/>
+        <text x="32" y="405" class="brown">Saturnbird</text>
+        <text x="305" y="405" class="muted">精品速溶 / 颜值</text>
+        <text x="595" y="405" class="muted">宿舍 DIY、礼物</text>
+        <text x="885" y="405" class="muted">价格偏高</text>
+        <text x="1138" y="392" class="muted">突出盲盒混搭与</text>
+        <text x="1138" y="424" class="muted">趣味创意</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(112 1520)">
+    <text x="0" y="0" class="h2 ink">03 Campus User Research</text>
+    <text x="0" y="42" class="small muted">校园用户调研假设：备考提神、低价福利、社交分享和新奇体验是关键触发点</text>
+
+    <g transform="translate(0 90)">
+      <rect width="660" height="326" rx="30" fill="#effcf7" class="line"/>
+      <text x="34" y="56" class="h3 ink">Target Persona</text>
+      <text x="34" y="105" class="body muted">核心人群：高校备考学生 / 社团活跃学生</text>
+      <text x="34" y="148" class="body muted">需求：提神、平价、可分享、轻社交</text>
+      <text x="34" y="191" class="body muted">行为：愿意转发海报换取试饮小样</text>
+      <text x="34" y="234" class="body muted">痛点：普通试饮路演缺少记忆点和二次传播</text>
+      <text x="34" y="282" class="en small" fill="#0f766e">Insight: Make coffee a social identity game.</text>
+    </g>
+
+    <g transform="translate(716 90)">
+      <rect width="660" height="326" rx="30" fill="#fff4cd" class="line"/>
+      <text x="34" y="56" class="h3 ink">Campaign Opportunity</text>
+      <text x="34" y="105" class="body muted">线上：5 题 Coffee MBTI 趣味测试</text>
+      <text x="34" y="148" class="body muted">线下：盲盒冲泡实验室 + 组队 PK</text>
+      <text x="34" y="191" class="body muted">传播：人格海报转发 + 打卡墙短视频</text>
+      <text x="34" y="234" class="body muted">转化：试饮派发、礼盒陈列、社群沉淀</text>
+      <text x="34" y="282" class="en small" fill="#8a5a00">Opportunity: Turn trial into shareable content.</text>
+    </g>
+  </g>
+
+  <g transform="translate(112 1988)">
+    <rect width="1376" height="78" rx="22" fill="#2d2630"/>
+    <text x="34" y="32" fill="#ffe66d" class="en tiny">DATA REFERENCES</text>
+    <text x="34" y="58" fill="#fffdf8" class="tiny">Mordor Intelligence: China Coffee Market / China RTD Coffee Market; China Daily: NESCAFE youth &amp; university consumers; ResearchAndMarkets: RTD Coffee in China.</text>
+  </g>
+</svg>

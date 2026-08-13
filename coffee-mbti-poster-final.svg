@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2200" viewBox="0 0 1600 2200">
+  <defs>
+    <style>
+      .bg { fill: #f8f1e8; }
+      .ink { fill: #2c221d; }
+      .muted { fill: #6f625b; }
+      .brown { fill: #7a4a33; }
+      .cream { fill: #fffdf8; }
+      .peach { fill: #f2b39c; }
+      .rose { fill: #db8a84; }
+      .sage { fill: #a8b8a2; }
+      .sky { fill: #9bbfe0; }
+      .gold { fill: #e8c46f; }
+      .line { stroke: #2c221d; stroke-width: 5; }
+      .thin { stroke: #ceb9a8; stroke-width: 3; }
+      text { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; letter-spacing: 0; }
+      .en { font-family: Arial, sans-serif; font-weight: 900; letter-spacing: 1px; }
+      .title { font-size: 76px; font-weight: 900; }
+      .subtitle { font-size: 30px; font-weight: 800; }
+      .h2 { font-size: 34px; font-weight: 900; }
+      .h3 { font-size: 24px; font-weight: 900; }
+      .body { font-size: 21px; font-weight: 700; }
+      .small { font-size: 17px; font-weight: 700; }
+      .tiny { font-size: 15px; font-weight: 700; }
+      .card { fill: #ffffff; stroke: #2c221d; stroke-width: 5; }
+      .shadow { filter: drop-shadow(8px 8px 0 rgba(44, 34, 29, 1)); }
+    </style>
+    <pattern id="dots" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="4" fill="#d9a97f" opacity="0.28"/>
+    </pattern>
+    <linearGradient id="coffeeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff9ed"/>
+      <stop offset="0.62" stop-color="#f5d2a8"/>
+      <stop offset="1" stop-color="#9b5233"/>
+    </linearGradient>
+  </defs>
+
+  <rect class="bg" width="1600" height="2200"/>
+  <rect width="1600" height="2200" fill="url(#dots)" opacity="0.55"/>
+  <circle cx="1360" cy="150" r="150" fill="#eadcc4" opacity="0.9"/>
+  <circle cx="160" cy="1950" r="180" fill="#dfeaf0" opacity="0.85"/>
+
+  <rect x="64" y="64" width="1472" height="2072" rx="42" class="card shadow"/>
+
+  <!-- Header -->
+  <g transform="translate(112 108)">
+    <g>
+      <rect x="0" y="0" width="104" height="104" rx="24" fill="#fff2de" class="line"/>
+      <path d="M28 70c18-30 41-47 62-52-6 22-25 41-62 52Z" fill="#7a4a33" stroke="#2c221d" stroke-width="5"/>
+      <path d="M30 74c22-5 44-3 66 6-15 12-39 15-66-6Z" fill="#f2b39c" stroke="#2c221d" stroke-width="5"/>
+    </g>
+    <text x="140" y="54" class="en" font-size="28" fill="#7a4a33">COFFEE MBTI CAMPAIGN</text>
+    <text x="140" y="126" class="title ink">雀巢咖啡 MBTI 海报</text>
+    <text x="143" y="174" class="subtitle muted">找到你的咖啡人格 · 线上测试 / 盲盒冲泡实验室 / 转发领试饮</text>
+
+    <g transform="translate(782 6)">
+      <rect x="0" y="0" width="548" height="52" rx="12" fill="#fff3e8"/>
+      <rect x="216" y="0" width="118" height="52" rx="12" fill="#e8c46f"/>
+      <text x="24" y="34" class="tiny ink">活动介绍</text>
+      <text x="136" y="34" class="tiny ink">线上测试</text>
+      <text x="232" y="34" class="tiny ink">海报主视觉</text>
+      <text x="352" y="34" class="tiny ink">扫码参与</text>
+    </g>
+  </g>
+
+  <!-- Hero -->
+  <g transform="translate(112 322)">
+    <rect x="0" y="0" width="1376" height="250" rx="30" fill="#5f3c2b" class="line"/>
+    <text x="54" y="72" fill="#fff5e2" class="en small">NESTLÉ CAMPUS COFFEE CAMPAIGN</text>
+    <text x="54" y="160" fill="#fffdf8" class="title">COFFEE MBTI</text>
+    <text x="56" y="210" fill="#f0cfba" class="subtitle">线上测试 / 盲盒冲泡实验室 / 转发领试饮 / 校园限定活动</text>
+
+    <g transform="translate(1070 34)">
+      <rect x="0" y="0" width="250" height="182" rx="22" fill="#fff7ee" class="line"/>
+      <circle cx="124" cy="70" r="44" fill="#e8c46f" class="line"/>
+      <path d="M115 28h18l7 24h-32z" fill="#fff" stroke="#2c221d" stroke-width="5"/>
+      <path d="M98 124c0-22 14-36 26-36h12c12 0 26 14 26 36" fill="#fff" stroke="#2c221d" stroke-width="5"/>
+      <path d="M114 124c0-15 6-25 10-25s10 10 10 25" fill="none" stroke="#2c221d" stroke-width="5"/>
+      <text x="42" y="156" class="en tiny ink">Scan &amp; Join</text>
+    </g>
+  </g>
+
+  <!-- Center visual -->
+  <g transform="translate(112 636)">
+    <text x="0" y="0" class="h2 ink">活动主视觉</text>
+    <text x="0" y="38" class="small muted">主图更偏真实海报风：咖啡杯、人格卡、活动信息卡、二维码位</text>
+
+    <g transform="translate(0 74)">
+      <rect width="1376" height="700" rx="34" fill="#fffefb" class="line"/>
+      <circle cx="240" cy="150" r="52" fill="#f2b39c" opacity="0.35"/>
+      <circle cx="1150" cy="156" r="64" fill="#a8b8a2" opacity="0.28"/>
+      <circle cx="1060" cy="570" r="76" fill="#9bbfe0" opacity="0.22"/>
+      <circle cx="300" cy="560" r="68" fill="#e8c46f" opacity="0.22"/>
+
+      <!-- central cup -->
+      <g transform="translate(520 136)">
+        <ellipse cx="170" cy="420" rx="220" ry="42" fill="#d7c0ab" opacity="0.35"/>
+        <path d="M102 122h136c30 0 54 24 54 54v90c0 62-50 112-112 112h-20c-62 0-112-50-112-112v-90c0-30 24-54 54-54Z" fill="url(#coffeeGrad)" stroke="#2c221d" stroke-width="5"/>
+        <path d="M293 180c34 0 54 22 54 50s-20 50-54 50" fill="none" stroke="#2c221d" stroke-width="5"/>
+        <path d="M125 70c18-34 40-52 60-58-6 20-20 40-42 58" fill="none" stroke="#fff7e8" stroke-width="7" stroke-linecap="round"/>
+        <path d="M166 62c18-34 40-52 60-58-6 20-20 40-42 58" fill="none" stroke="#fff7e8" stroke-width="7" stroke-linecap="round"/>
+      </g>
+
+      <!-- personality cards -->
+      <g transform="translate(92 108)">
+        <rect x="0" y="0" width="232" height="168" rx="26" fill="#ffffff" class="line"/>
+        <text x="68" y="54" class="h3 ink">AMBER</text>
+        <text x="50" y="88" class="tiny muted">温暖 / 甜感</text>
+        <text x="28" y="134" class="body muted">适合加奶</text>
+      </g>
+      <g transform="translate(92 314)">
+        <rect x="0" y="0" width="232" height="168" rx="26" fill="#ffffff" class="line"/>
+        <text x="72" y="54" class="h3 ink">MINT</text>
+        <text x="48" y="88" class="tiny muted">清爽 / 轻盈</text>
+        <text x="28" y="134" class="body muted">适合冰饮</text>
+      </g>
+      <g transform="translate(1178 108)">
+        <rect x="0" y="0" width="232" height="168" rx="26" fill="#ffffff" class="line"/>
+        <text x="72" y="54" class="h3 ink">ROAST</text>
+        <text x="58" y="88" class="tiny muted">浓郁 / 深烘</text>
+        <text x="28" y="134" class="body muted">适合提神</text>
+      </g>
+      <g transform="translate(1178 314)">
+        <rect x="0" y="0" width="232" height="168" rx="26" fill="#ffffff" class="line"/>
+        <text x="68" y="54" class="h3 ink">CLASSIC</text>
+        <text x="46" y="88" class="tiny muted">平衡 / 百搭</text>
+        <text x="28" y="134" class="body muted">适合日常</text>
+      </g>
+
+      <!-- info strip -->
+      <g transform="translate(90 520)">
+        <rect width="1196" height="126" rx="24" fill="#fff6ee" class="line"/>
+        <text x="34" y="44" class="h3 ink">活动流程</text>
+        <text x="210" y="44" class="body muted">1. 扫码测试</text>
+        <text x="404" y="44" class="body muted">2. 分享领试饮</text>
+        <text x="628" y="44" class="body muted">3. 现场冲泡挑战</text>
+        <text x="876" y="44" class="body muted">4. 打卡拍照</text>
+        <text x="34" y="90" class="small muted">Campus Only · Limited Time · Share to Unlock Your Coffee Personality</text>
+        <rect x="1004" y="26" width="160" height="72" rx="14" fill="#ffffff" class="line"/>
+        <text x="1050" y="71" class="en small ink">QR</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(112 1422)">
+    <text x="0" y="0" class="h2 ink">海报信息</text>
+    <text x="0" y="36" class="small muted">活动类型：校园品牌活动 ｜ 传播重点：年轻化、互动感、试饮转化</text>
+
+    <g transform="translate(0 74)">
+      <rect width="660" height="286" rx="28" fill="#eaf4ee" class="line"/>
+      <text x="34" y="56" class="h3 ink">主张</text>
+      <text x="34" y="108" class="body muted">把咖啡当成一种“人格表达”。</text>
+      <text x="34" y="154" class="body muted">用 MBTI 测试做入口，降低陌生感。</text>
+      <text x="34" y="200" class="body muted">用盲盒冲泡实验室制造现场话题。</text>
+      <text x="34" y="246" class="body muted">用转发领试饮形成二次传播。</text>
+    </g>
+
+    <g transform="translate(716 74)">
+      <rect width="660" height="286" rx="28" fill="#fff1f1" class="line"/>
+      <text x="34" y="56" class="h3 ink">投放场景</text>
+      <text x="34" y="108" class="body muted">校园社群 / 公众号 / 海报栏 / 现场摊位</text>
+      <text x="34" y="154" class="body muted">适合在开学季、社团招新、考试周前后使用</text>
+      <text x="34" y="200" class="body muted">可搭配试饮、拍照墙、限定小礼物一起传播</text>
+      <text x="34" y="246" class="body muted">强调“年轻化、好玩、真实、有记忆点”</text>
+    </g>
+  </g>
+
+  <g transform="translate(112 1836)">
+    <rect width="1376" height="162" rx="28" fill="#2d221d"/>
+    <text x="34" y="56" fill="#f9e7bb" class="h3">Nestlé Campus Coffee Campaign</text>
+    <text x="34" y="106" fill="#ffffff" class="body">一杯咖啡，一种人格；一场活动，一次记忆。</text>
+    <text x="34" y="140" fill="#d6cac1" class="small">Coffee MBTI · Blind Box Brewing Lab · Trial Giveaway</text>
+  </g>
+</svg>

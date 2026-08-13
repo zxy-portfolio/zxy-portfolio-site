@@ -1,0 +1,1561 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>祝馨语运营作品集</title>
+  <meta name="description" content="祝馨语的运营作品集，展示校园品牌活动、市场推广、内容宣发、私域引流、海报设计和文案策划。">
+  <style>
+    :root {
+      --ink: #2d2630;
+      --muted: #716779;
+      --paper: #fff7ec;
+      --panel: #ffffff;
+      --pink: #ff7dac;
+      --peach: #ffb36b;
+      --mint: #66d7b5;
+      --sky: #72b7ff;
+      --lemon: #ffe66d;
+      --line: #f0d9c7;
+      --shadow: 0 18px 48px rgba(105, 58, 35, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(255, 230, 109, 0.45), transparent 28%),
+        radial-gradient(circle at 85% 18%, rgba(114, 183, 255, 0.35), transparent 26%),
+        linear-gradient(180deg, #fff7ec 0%, #fffdf8 52%, #fff3f8 100%);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px clamp(18px, 4vw, 54px);
+      background: rgba(255, 247, 236, 0.9);
+      border-bottom: 2px solid rgba(255, 179, 107, 0.35);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border: 2px solid var(--ink);
+      border-radius: 50%;
+      background: var(--lemon);
+      box-shadow: 3px 3px 0 var(--ink);
+      font-size: 15px;
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(10px, 2.4vw, 24px);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--pink);
+    }
+
+    .hero {
+      min-height: calc(100vh - 65px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 0.84fr);
+      align-items: center;
+      gap: clamp(28px, 5vw, 68px);
+      padding: clamp(34px, 6vw, 80px) clamp(18px, 4vw, 54px) 44px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 13px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: #fff;
+      box-shadow: 3px 3px 0 var(--ink);
+      color: #594244;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    h1 {
+      max-width: 10ch;
+      margin: 18px 0 18px;
+      font-size: clamp(44px, 8vw, 104px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .highlight {
+      color: var(--pink);
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 0;
+      color: #554a5c;
+      font-size: clamp(18px, 2vw, 23px);
+      font-weight: 650;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--pink);
+      color: #fff;
+      box-shadow: 4px 4px 0 var(--ink);
+      font-weight: 900;
+      line-height: 1.2;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .button:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 var(--ink);
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .hero-board {
+      display: grid;
+      grid-template-columns: minmax(210px, 0.9fr) minmax(220px, 0.82fr);
+      align-items: center;
+      gap: clamp(16px, 3vw, 26px);
+      min-height: 470px;
+      padding: clamp(18px, 3vw, 28px);
+      border: 2px solid var(--ink);
+      border-radius: 28px;
+      background: linear-gradient(135deg, #fffdf8 0%, #fff0f7 52%, #eaf8ff 100%);
+      box-shadow: 10px 10px 0 var(--ink);
+      overflow: hidden;
+    }
+
+    .avatar-profile {
+      position: relative;
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      gap: 14px;
+      min-height: 390px;
+      padding: 18px;
+      border: 2px solid var(--ink);
+      border-radius: 24px;
+      background: #ffffff;
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .avatar {
+      width: min(100%, 330px);
+      filter: drop-shadow(0 18px 18px rgba(45, 38, 48, 0.18));
+    }
+
+    .avatar-name {
+      position: absolute;
+      right: 14px;
+      bottom: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      min-height: 40px;
+      padding: 8px 15px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--lemon);
+      box-shadow: 4px 4px 0 var(--ink);
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 950;
+      text-align: center;
+    }
+
+    .metrics-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .metric-card {
+      width: 100%;
+      padding: 18px;
+      border: 2px solid var(--ink);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 5px 5px 0 rgba(45, 38, 48, 0.96);
+    }
+
+    .metric-card:nth-child(2) {
+      background: #fff0f7;
+    }
+
+    .metric-card:nth-child(3) {
+      background: #effcf7;
+    }
+
+    .metric-card strong {
+      display: block;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1;
+    }
+
+    .metric-card span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    section {
+      padding: 72px clamp(18px, 4vw, 54px);
+      border-top: 2px dashed rgba(255, 179, 107, 0.5);
+    }
+
+    #experience {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 92% 10%, rgba(255, 205, 223, 0.34), transparent 18%),
+        radial-gradient(circle at 8% 92%, rgba(255, 228, 157, 0.34), transparent 20%),
+        linear-gradient(180deg, rgba(255, 251, 247, 0.96), rgba(255, 247, 254, 0.92));
+    }
+
+    #experience::before {
+      content: "";
+      position: absolute;
+      inset: 22px auto auto 22px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.72) 0 18%, rgba(255, 210, 228, 0.22) 19% 44%, transparent 45%);
+      filter: blur(1px);
+      pointer-events: none;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      max-width: 560px;
+      margin: 0;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+      gap: clamp(24px, 4vw, 54px);
+      align-items: start;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stat,
+    .case,
+    .timeline-item,
+    .toolbox-item {
+      border: 2px solid var(--ink);
+      border-radius: 18px;
+      background: var(--panel);
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .stat {
+      min-height: 128px;
+      padding: 18px;
+    }
+
+    .stat:nth-child(2) {
+      background: #fff4cd;
+    }
+
+    .stat:nth-child(3) {
+      background: #eaf8ff;
+    }
+
+    .stat:nth-child(4) {
+      background: #ffeaf3;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .about-copy {
+      margin: 0;
+      color: #443a48;
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: #fff;
+      color: #413544;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .chip:nth-child(2n) {
+      background: #effcf7;
+    }
+
+    .chip:nth-child(3n) {
+      background: #fff4cd;
+    }
+
+    .cases {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .case {
+      overflow: hidden;
+    }
+
+    .case-cover {
+      position: relative;
+      min-height: 210px;
+      background: #fff4cd;
+      overflow: hidden;
+    }
+
+    .case-cover img {
+      width: 100%;
+      height: 100%;
+      min-height: 210px;
+      object-fit: cover;
+      mix-blend-mode: multiply;
+    }
+
+    .case-label {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      padding: 7px 11px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: #fff;
+        font-size: 14px;
+      font-weight: 900;
+    }
+
+    .image-edit-button,
+    .delete-item-button {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      z-index: 3;
+      display: none;
+      min-height: 34px;
+      padding: 7px 11px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--lemon);
+      color: var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .delete-item-button {
+      right: 12px;
+      top: auto;
+      bottom: 12px;
+      z-index: 4;
+      background: #ffeaf3;
+    }
+
+    body.editing .image-edit-button,
+    body.editing .delete-item-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .is-deleted {
+      display: none !important;
+    }
+
+    .metric-card,
+    .stat,
+    .chip,
+    .tag,
+    .avatar-name,
+    .case,
+    .case-label,
+    .timeline-item,
+    .result span {
+      position: relative;
+    }
+
+    .case-body {
+      padding: 18px;
+    }
+
+    .case h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+
+    .case p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    .result {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .result span {
+      min-height: 58px;
+      padding: 10px;
+      border-radius: 14px;
+      background: #fff7ec;
+      color: #342934;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      padding: 22px 22px 20px;
+      min-height: 172px;
+      background: #fffdf8;
+      border-radius: 24px;
+      box-shadow: 0 12px 28px rgba(44, 34, 29, 0.05);
+    }
+
+    .timeline-item::marker {
+      content: "";
+    }
+
+    .timeline-item::selection {
+      background: transparent;
+    }
+
+    .timeline-item::before,
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      border-radius: 999px;
+      opacity: 0.92;
+    }
+
+    .timeline-item::before {
+      right: 18px;
+      top: 14px;
+      width: 72px;
+      height: 72px;
+      background:
+        radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.98) 0 18%, transparent 19%),
+        radial-gradient(circle at 50% 50%, rgba(255, 172, 199, 0.55) 0 44%, transparent 45%),
+        radial-gradient(circle at 70% 36%, rgba(255, 243, 160, 0.96) 0 8%, transparent 9%),
+        radial-gradient(circle at 34% 72%, rgba(255, 243, 160, 0.96) 0 8%, transparent 9%),
+        radial-gradient(circle at 72% 72%, rgba(255, 243, 160, 0.96) 0 8%, transparent 9%);
+      filter: drop-shadow(0 6px 0 rgba(44, 34, 29, 0.08));
+      transform: rotate(10deg);
+    }
+
+    .timeline-item::after {
+      right: 98px;
+      top: 20px;
+      width: 16px;
+      height: 16px;
+      background: rgba(255, 203, 96, 0.92);
+      box-shadow:
+        -22px 12px 0 rgba(255, 155, 183, 0.76),
+        -38px 34px 0 rgba(146, 212, 255, 0.78),
+        -6px 48px 0 rgba(196, 240, 182, 0.82);
+      transform: rotate(16deg);
+    }
+
+    .timeline-item::marker {
+      content: "";
+    }
+
+    .timeline-item:nth-child(1) {
+      background:
+        radial-gradient(circle at 94% 16%, rgba(255, 196, 170, 0.26), transparent 22%),
+        linear-gradient(135deg, #fff8ef 0%, #fffdf8 100%);
+    }
+
+    .timeline-item:nth-child(2) {
+      background:
+        radial-gradient(circle at 90% 18%, rgba(177, 219, 255, 0.28), transparent 22%),
+        linear-gradient(135deg, #f7fbff 0%, #fffdf8 100%);
+    }
+
+    .timeline-item:nth-child(3) {
+      background:
+        radial-gradient(circle at 92% 18%, rgba(183, 236, 205, 0.28), transparent 22%),
+        linear-gradient(135deg, #f6fbf7 0%, #fffdf8 100%);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 10px;
+      border-radius: 24px 0 0 24px;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255, 183, 205, 0.92), rgba(255, 208, 127, 0.92));
+      box-shadow: 2px 0 0 rgba(44, 34, 29, 0.06);
+    }
+
+    .timeline-item:nth-child(1)::before {
+      background: linear-gradient(180deg, rgba(255, 164, 123, 0.95), rgba(255, 214, 157, 0.95));
+    }
+
+    .timeline-item:nth-child(2)::before {
+      background: linear-gradient(180deg, rgba(145, 200, 255, 0.95), rgba(191, 230, 255, 0.95));
+    }
+
+    .timeline-item:nth-child(3)::before {
+      background: linear-gradient(180deg, rgba(157, 227, 181, 0.95), rgba(203, 242, 218, 0.95));
+    }
+
+    .timeline-ability {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      max-width: 170px;
+      padding: 11px 15px;
+      border: 2px solid rgba(44, 34, 29, 0.22);
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 238, 246, 0.98));
+      color: #b14f7a;
+      font-size: 17px;
+      font-weight: 950;
+      line-height: 1.1;
+      text-align: center;
+      letter-spacing: 0;
+      white-space: nowrap;
+      transform: rotate(3deg);
+      box-shadow: 4px 4px 0 rgba(44, 34, 29, 0.10);
+    }
+
+    .timeline-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+      padding: 30px 92px 10px 2px;
+      max-width: 760px;
+    }
+
+    .timeline-time {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 125, 172, 0.14);
+      color: #cc4b84;
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: 0.02em;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      font-size: 23px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 650;
+      line-height: 1.7;
+      max-width: 62ch;
+    }
+
+    .timeline-key {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      margin: 0 2px;
+      padding: 2px 8px 3px;
+      color: #2d2630;
+      font-weight: 950;
+      border-radius: 999px;
+      background: rgba(255, 220, 122, 0.34);
+      box-shadow: inset 0 -2px 0 rgba(44, 34, 29, 0.08);
+    }
+
+    .timeline-key::after {
+      content: "";
+      position: absolute;
+      left: 6px;
+      right: 6px;
+      bottom: 1px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      opacity: 0.12;
+    }
+
+    .timeline-item:nth-child(1) .timeline-key {
+      background: rgba(255, 186, 131, 0.36);
+    }
+
+    .timeline-item:nth-child(2) .timeline-key {
+      background: rgba(168, 219, 255, 0.38);
+    }
+
+    .timeline-item:nth-child(3) .timeline-key {
+      background: rgba(175, 235, 195, 0.38);
+    }
+
+    .timeline-content h3,
+    .timeline-content p {
+      text-wrap: balance;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.62fr);
+      gap: 28px;
+      align-items: stretch;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(255, 230, 109, 0.42), transparent 28%),
+        #2d2630;
+      color: #fff;
+    }
+
+    .contact h2 {
+      max-width: 760px;
+      margin: 18px 0 0;
+      font-size: clamp(34px, 5vw, 66px);
+      line-height: 1.03;
+      letter-spacing: 0;
+    }
+
+    .contact p {
+      max-width: 600px;
+      margin: 22px 0 0;
+      color: #ffe9f1;
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    .contact-panel {
+      display: grid;
+      gap: 12px;
+      align-content: center;
+      padding: 22px;
+      border: 2px solid #fff;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 6px 6px 0 #fff;
+    }
+
+    .contact-panel a {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    body.editing .contact-panel a[href^="tel:"] {
+      outline: none;
+      background: transparent;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 24px clamp(18px, 4vw, 54px);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .edit-toolbar {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 30;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: min(420px, calc(100vw - 36px));
+      padding: 10px;
+      border: 2px solid var(--ink);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 5px 5px 0 var(--ink);
+      backdrop-filter: blur(14px);
+    }
+
+    .edit-toolbar button {
+      min-height: 38px;
+      padding: 8px 12px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: #fff4cd;
+      color: var(--ink);
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .edit-toolbar button:first-child {
+      background: var(--pink);
+      color: #fff;
+    }
+
+    .edit-toolbar button:hover {
+      transform: translate(1px, 1px);
+    }
+
+    .edit-toolbar button:disabled {
+      cursor: not-allowed;
+      opacity: 0.45;
+      transform: none;
+    }
+
+    .edit-hint {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      z-index: 29;
+      max-width: min(430px, calc(100vw - 36px));
+      padding: 12px 14px;
+      border: 2px solid var(--ink);
+      border-radius: 16px;
+      background: #effcf7;
+      box-shadow: 4px 4px 0 var(--ink);
+      color: #3f3544;
+      font-size: 14px;
+      font-weight: 850;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 160ms ease, transform 160ms ease;
+    }
+
+    body.editing .edit-hint {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    body.editing [contenteditable="true"] {
+      outline: 2px dashed rgba(255, 125, 172, 0.65);
+      outline-offset: 4px;
+      border-radius: 8px;
+    }
+
+    body.editing [contenteditable="true"]:focus {
+      outline: 3px solid var(--pink);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    @media (max-width: 960px) {
+      .hero,
+      .about-grid,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-board {
+        grid-template-columns: 1fr;
+        min-height: 390px;
+      }
+
+      .cases {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .toolbox {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+
+      h1 {
+        max-width: 9ch;
+      }
+
+      .section-head,
+      .footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .stats,
+      .cases,
+      .toolbox,
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-ability {
+        top: 16px;
+        right: 16px;
+        transform: none;
+        max-width: 150px;
+        padding: 10px 13px;
+        font-size: 15px;
+      }
+
+      .timeline-content {
+        padding-right: 2px;
+        padding-top: 24px;
+        padding-top: 20px;
+      }
+
+      .hero-board {
+        min-height: 420px;
+        box-shadow: 6px 6px 0 var(--ink);
+      }
+
+      .edit-toolbar {
+        right: 12px;
+        bottom: 12px;
+      }
+
+      .edit-hint {
+        left: 12px;
+        right: 12px;
+        bottom: 76px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="edit-toolbar" aria-label="网页编辑工具">
+    <button type="button" id="editToggle">开始编辑</button>
+    <button type="button" id="undoAction">撤回</button>
+    <button type="button" id="savePage">下载新版</button>
+    <button type="button" id="resetPage">恢复模板</button>
+  </div>
+  <div class="edit-hint">现在可以直接点击页面文字修改。改错了点“撤回”；需要发给别人时，点“下载新版”。</div>
+
+  <header class="nav">
+    <a class="brand" href="#">
+      <span class="brand-mark">OP</span>
+      <span>祝馨语 · 运营作品集</span>
+    </a>
+    <nav class="nav-links" aria-label="主要导航">
+      <a href="#about">关于我</a>
+      <a href="#cases">项目案例</a>
+      <a href="#experience">实习经历</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="首页介绍">
+      <div>
+        <span class="tag">校园品牌活动 / 市场推广 / 内容宣发</span>
+        <h1>把用户洞察做成<span class="highlight">好玩又有效</span>的活动现场</h1>
+        <p class="lead">我是祝馨语，浙江工业大学法学本科在读，关注运营类实习机会。曾参与雀巢、新东方、科大讯飞等活动项目，擅长活动策划、私域引流、内容宣发、现场执行和效果评估。</p>
+        <div class="hero-actions">
+          <a class="button" href="#cases">看我的案例</a>
+          <a class="button secondary" href="#contact">联系我</a>
+        </div>
+      </div>
+
+      <div class="hero-board" aria-label="运营成果速览">
+        <div class="avatar-profile">
+          <svg class="avatar" viewBox="0 0 420 500" role="img" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="hairShine" x1="95" y1="70" x2="318" y2="392" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a86742"/>
+                <stop offset="1" stop-color="#633626"/>
+              </linearGradient>
+              <linearGradient id="shirtPop" x1="122" y1="309" x2="304" y2="467" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ff8fbd"/>
+                <stop offset="1" stop-color="#72b7ff"/>
+              </linearGradient>
+            </defs>
+            <circle cx="88" cy="119" r="24" fill="#ffe66d" stroke="#2d2630" stroke-width="7"/>
+            <circle cx="335" cy="166" r="18" fill="#66d7b5" stroke="#2d2630" stroke-width="7"/>
+            <path d="M61 306c25-27 58-31 85-13" fill="none" stroke="#ffb36b" stroke-width="12" stroke-linecap="round"/>
+            <path d="M314 80c18 5 30 16 38 34" fill="none" stroke="#ff7dac" stroke-width="12" stroke-linecap="round"/>
+
+            <path d="M93 429c14-91 23-170 14-237C95 99 145 51 212 51c77 0 122 56 111 148-8 64-5 142 15 230-69 34-173 34-245 0Z" fill="url(#hairShine)" stroke="#2d2630" stroke-width="8" stroke-linejoin="round"/>
+            <path d="M115 436c13-62 19-134 12-210" fill="none" stroke="#4a281f" stroke-width="8" stroke-linecap="round" opacity=".45"/>
+            <path d="M306 435c-17-72-20-142-11-213" fill="none" stroke="#4a281f" stroke-width="8" stroke-linecap="round" opacity=".45"/>
+
+            <path d="M91 461c8-73 59-119 120-119 62 0 113 46 121 119H91Z" fill="url(#shirtPop)" stroke="#2d2630" stroke-width="8" stroke-linejoin="round"/>
+            <path d="M159 352c16 28 87 28 103 0v-41H159v41Z" fill="#ffd1b8" stroke="#2d2630" stroke-width="8"/>
+            <path d="M159 330c17 16 79 18 103 0v-26H159v26Z" fill="#e8a98f" opacity=".38"/>
+
+            <path d="M111 176c2-65 45-107 101-107 57 0 99 43 101 107v46c0 67-42 111-101 111s-101-44-101-111v-46Z" fill="#ffd1b8" stroke="#2d2630" stroke-width="8" stroke-linejoin="round"/>
+            <path d="M113 165c7-63 43-104 99-104 54 0 91 39 100 104-64 11-134 10-199 0Z" fill="url(#hairShine)" stroke="#2d2630" stroke-width="8" stroke-linejoin="round"/>
+            <path d="M122 158c13-57 45-86 90-86 43 0 74 28 89 86-50 16-128 16-179 0Z" fill="#70422f"/>
+            <path d="M134 156c8-36 17-60 30-74" fill="none" stroke="#a56842" stroke-width="8" stroke-linecap="round" opacity=".65"/>
+            <path d="M178 75c-6 24-8 49-6 82" fill="none" stroke="#a56842" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+            <path d="M218 74c5 27 6 54 2 84" fill="none" stroke="#a56842" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+            <path d="M258 83c11 18 18 42 22 73" fill="none" stroke="#a56842" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+
+            <path d="M133 205c-15-14-34-7-35 15-1 21 17 36 36 29" fill="#ffd1b8" stroke="#2d2630" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M288 205c15-14 34-7 35 15 1 21-17 36-36 29" fill="#ffd1b8" stroke="#2d2630" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <ellipse cx="171" cy="225" rx="20" ry="25" fill="#2d2630"/>
+            <ellipse cx="250" cy="225" rx="20" ry="25" fill="#2d2630"/>
+            <circle cx="164" cy="215" r="7" fill="#fff"/>
+            <circle cx="243" cy="215" r="7" fill="#fff"/>
+            <circle cx="178" cy="236" r="4" fill="#fff" opacity=".8"/>
+            <circle cx="257" cy="236" r="4" fill="#fff" opacity=".8"/>
+            <path d="M202 229c-3 14-7 26-11 36 9 6 21 6 30 0" fill="none" stroke="#c7816d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M181 287c20 21 48 21 65 0" fill="none" stroke="#2d2630" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="141" cy="260" r="17" fill="#ff9fc1" opacity=".72"/>
+            <circle cx="280" cy="260" r="17" fill="#ff9fc1" opacity=".72"/>
+
+            <path d="M137 400c18 11 47 18 75 18s56-7 74-18" fill="none" stroke="#2d2630" stroke-width="7" stroke-linecap="round" opacity=".35"/>
+            <rect x="180" y="371" width="66" height="48" rx="16" fill="#fff" stroke="#2d2630" stroke-width="7"/>
+            <path d="M198 394h30" stroke="#ff7dac" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <div class="avatar-name">祝馨语</div>
+        </div>
+        <div class="metrics-stack">
+        <div class="metric-card">
+          <strong>50+</strong>
+          <span>班级账号推送内容，覆盖通知、学习动态与成果展示</span>
+        </div>
+        <div class="metric-card">
+          <strong>15条</strong>
+          <span>原创剪辑视频，记录辩论赛、经验分享等活动高光</span>
+        </div>
+        <div class="metric-card">
+          <strong>38家</strong>
+          <span>科大讯飞展会拓展政企潜在合作客户</span>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about-grid">
+        <div class="stats">
+          <div class="stat">
+            <strong>1200+</strong>
+            <span>雀巢咖啡 MBTI 线上测试参与</span>
+          </div>
+          <div class="stat">
+            <strong>700+</strong>
+            <span>雀巢校园线下活动到场人次</span>
+          </div>
+          <div class="stat">
+            <strong>320+</strong>
+            <span>新东方活动新增精准家长私域</span>
+          </div>
+          <div class="stat">
+            <strong>8场</strong>
+            <span>法律圆桌沙龙全年落地</span>
+          </div>
+        </div>
+        <div>
+          <span class="tag">About Me</span>
+          <p class="about-copy">我具备校园活动策划、品牌营销、私域引流和内容宣发经验，曾围绕雀巢咖啡、新东方教育、科大讯飞星火法律大模型设计并落地线下活动。擅长从目标定位、竞品对标、用户洞察、创意玩法、物料统筹到现场执行和效果评估搭建完整活动链路，也能结合英语六级能力产出双语素材。</p>
+          <div class="chips">
+            <span class="chip">活动全案</span>
+            <span class="chip">用户洞察</span>
+            <span class="chip">品牌营销</span>
+            <span class="chip">私域引流</span>
+            <span class="chip">内容宣发</span>
+            <span class="chip">效果评估</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Excel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases">
+      <div class="section-head">
+        <h2>项目案例</h2>
+        <p>根据 PDF 简历整理的真实项目，突出活动全案、用户洞察、品牌营销、私域引流和效果评估能力。</p>
+      </div>
+      <div class="cases">
+        <article class="case">
+          <div class="case-cover">
+            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1000&q=82" alt="团队协作与内容策划">
+            <span class="case-label">品牌活动</span>
+          </div>
+          <div class="case-body">
+            <h3>雀巢咖啡 MBTI + 盲盒实验室</h3>
+            <p>落地双主题校园线下活动，以线上人格测试裂变引流，结合线下盲盒冲泡挑战、打卡墙和短视频模板，拉动新品试饮、礼盒转化与校园自传播。</p>
+            <div class="result">
+              <span>1200+ 测试参与</span>
+              <span>87 套礼盒成交</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-cover">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=82" alt="活动讨论和项目推进">
+            <span class="case-label">市场获客</span>
+          </div>
+          <div class="case-body">
+            <h3>新东方校园运动会与跳蚤市场</h3>
+            <p>依托趣味互动和公益义卖场景引流私域，以二手高分笔记、择校报告作为转化抓手，搭建线下获客、社群留存、1v1 咨询完整链路。</p>
+            <div class="result">
+              <span>800+ 师生覆盖</span>
+              <span>65 名咨询线索</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-cover">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=82" alt="社群用户交流">
+            <span class="case-label">AI 展会</span>
+          </div>
+          <div class="case-body">
+            <h3>科大讯飞星火法律大模型推广</h3>
+            <p>参与政企行业展会产品推广，设置合同实时审查体验、客户接待演示与问卷调研，同时完成宣传物料前置合规校验和产品需求归纳。</p>
+            <div class="result">
+              <span>52 人次咨询</span>
+              <span>47 份有效问卷</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-cover">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=82" alt="校园活动讨论">
+            <span class="case-label">校园实践</span>
+          </div>
+          <div class="case-body">
+            <h3>法律圆桌沙龙系列活动</h3>
+            <p>作为法学院学生会法律研究会副部长，策划法律圆桌沙龙，邀请教授、执业律师开展案例研讨，并配套产出预热、回顾推文和活动素材。</p>
+            <div class="result">
+              <span>全年 8 场沙龙</span>
+              <span>最高 120 人参与</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <h2>实习经历</h2>
+        <p>围绕品牌活动、市场获客和产品推广三类场景，沉淀从用户洞察、活动策划到现场执行和结果转化的完整经验。</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-ability">活动运营</div>
+          <div class="timeline-content">
+            <div class="timeline-time">2026.05 - 2026.07</div>
+            <h3>雀巢 / 校园品牌活动策划</h3>
+            <p>围绕高校备考学生的 <span class="timeline-key">提神</span>、<span class="timeline-key">社交</span> 和 <span class="timeline-key">低价礼盒</span> 需求，策划「咖啡 MBTI + 盲盒冲泡实验室」双主题活动；设计线上人格测试、转发领试饮、线下组队冲泡 <span class="timeline-key">PK</span> 与打卡传播机制，推动测试参与、试饮派发、礼盒成交和学生社群沉淀。</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-ability">私域转化</div>
+          <div class="timeline-content">
+            <div class="timeline-time">2025.03 - 2025.06</div>
+            <h3>新东方教育 / 市场部实习生</h3>
+            <p>参与校园运动会、跳蚤市场等线下获客活动，从家长升学规划需求和学生教辅资料需求出发，设计闯关游戏、公益义卖、<span class="timeline-key">高分笔记</span> 和 <span class="timeline-key">择校报告</span> 等引流抓手；协助现场分区、志愿者统筹、社群导流和高意向客户标记，形成线下触达、<span class="timeline-key">私域留存</span>、1v1 咨询承接链路。</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-ability">表达沟通</div>
+          <div class="timeline-content">
+            <div class="timeline-time">2024.07 - 2024.08</div>
+            <h3>科大讯飞 / 市场活动实习生</h3>
+            <p>参与星火法律大模型政企展会推广，协助搭建接待、现场演示和问卷调研流程；配合完成合同实时审查体验、一对一功能演示、宣传物料合规校验与客户需求回收，整理产品优化建议并同步研发团队，提升展会推广的 <span class="timeline-key">表达</span> 和 <span class="timeline-key">沟通</span> 质量。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <span class="tag">Let’s Talk</span>
+        <h2>期待加入一个重视用户洞察、活动创意和转化效果的运营团队。</h2>
+        <p>意向岗位：运营类实习岗位。可结合活动策划、市场推广、内容宣发、私域引流与效果评估开展工作。</p>
+      </div>
+      <address class="contact-panel">
+        <a href="tel:17201825171">17201825171</a>
+        <a href="mailto:2847371451@qq.com">2847371451@qq.com</a>
+        <a href="#cases">查看项目案例</a>
+      </address>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 祝馨语</span>
+    <span>活动不是一次热闹，而是一条从洞察到转化的完整链路。</span>
+  </footer>
+  <script>
+    (() => {
+      const STORAGE_KEY = "cute-ops-portfolio-edits-v1";
+      const IMAGE_STORAGE_KEY = "cute-ops-portfolio-case-images-v1";
+      const DELETE_STORAGE_KEY = "cute-ops-portfolio-deleted-items-v1";
+      const deleteSelector = [
+        ".metric-card",
+        ".stat",
+        ".chip",
+        ".tag",
+        ".avatar-name",
+        ".case",
+        ".case-label",
+        ".timeline-item",
+        ".result span"
+      ].join(",");
+      const editableSelector = [
+        ".brand span:last-child",
+        ".tag",
+        "h1",
+        ".lead",
+        ".avatar-name",
+        ".metric-card strong",
+        ".metric-card span",
+        ".stat strong",
+        ".stat span",
+        ".about-copy",
+        ".chip",
+        ".section-head h2",
+        ".section-head p",
+        ".case-label",
+        ".case h3",
+        ".case p",
+        ".result span",
+        ".timeline-time",
+        ".timeline-item h3",
+        ".timeline-item p",
+        ".contact h2",
+        ".contact p",
+        ".contact-panel a",
+        ".footer span"
+      ].join(",");
+
+      const editToggle = document.querySelector("#editToggle");
+      const undoAction = document.querySelector("#undoAction");
+      const savePage = document.querySelector("#savePage");
+      const resetPage = document.querySelector("#resetPage");
+      const editableItems = Array.from(document.querySelectorAll(editableSelector));
+      const caseImages = Array.from(document.querySelectorAll(".case-cover img"));
+      const deleteItems = Array.from(document.querySelectorAll(deleteSelector));
+      const originalContent = editableItems.map((item) => item.innerHTML);
+      const originalImages = caseImages.map((item) => item.getAttribute("src"));
+      const historyStack = [];
+      let isRestoring = false;
+
+      function getState() {
+        return {
+          content: editableItems.map((item) => item.innerHTML),
+          images: caseImages.map((item) => item.getAttribute("src")),
+          deleted: deleteItems.map((item) => item.classList.contains("is-deleted"))
+        };
+      }
+
+      function applyState(state) {
+        isRestoring = true;
+        editableItems.forEach((item, index) => {
+          if (typeof state.content[index] === "string") {
+            item.innerHTML = state.content[index];
+          }
+        });
+        caseImages.forEach((item, index) => {
+          if (typeof state.images[index] === "string") {
+            item.src = state.images[index];
+          }
+        });
+        deleteItems.forEach((item, index) => {
+          item.classList.toggle("is-deleted", state.deleted[index] === true);
+        });
+        persistState();
+        isRestoring = false;
+      }
+
+      function pushHistory() {
+        if (isRestoring) return;
+        historyStack.push(getState());
+        if (historyStack.length > 40) {
+          historyStack.shift();
+        }
+        updateUndoButton();
+      }
+
+      function updateUndoButton() {
+        undoAction.disabled = historyStack.length === 0;
+        undoAction.title = historyStack.length ? "撤回上一步修改" : "暂无可撤回操作";
+      }
+
+      function persistState() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(editableItems.map((item) => item.innerHTML)));
+        localStorage.setItem(IMAGE_STORAGE_KEY, JSON.stringify(caseImages.map((item) => item.getAttribute("src"))));
+        localStorage.setItem(DELETE_STORAGE_KEY, JSON.stringify(deleteItems.map((item) => item.classList.contains("is-deleted"))));
+      }
+
+      function loadEdits() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          try {
+            const values = JSON.parse(saved);
+            editableItems.forEach((item, index) => {
+              if (typeof values[index] === "string") {
+                item.innerHTML = values[index];
+              }
+            });
+          } catch (error) {
+            localStorage.removeItem(STORAGE_KEY);
+          }
+        }
+
+        const savedImages = localStorage.getItem(IMAGE_STORAGE_KEY);
+        if (savedImages) {
+          try {
+            const values = JSON.parse(savedImages);
+            caseImages.forEach((item, index) => {
+              if (typeof values[index] === "string" && values[index]) {
+                item.src = values[index];
+              }
+            });
+          } catch (error) {
+            localStorage.removeItem(IMAGE_STORAGE_KEY);
+          }
+        }
+
+        const savedDeletedItems = localStorage.getItem(DELETE_STORAGE_KEY);
+        if (savedDeletedItems) {
+          try {
+            const values = JSON.parse(savedDeletedItems);
+            deleteItems.forEach((item, index) => {
+              item.classList.toggle("is-deleted", values[index] === true);
+            });
+          } catch (error) {
+            localStorage.removeItem(DELETE_STORAGE_KEY);
+          }
+        }
+      }
+
+      function saveEdits() {
+        if (isRestoring) return;
+        const values = editableItems.map((item) => item.innerHTML);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(values));
+      }
+
+      function saveImages() {
+        if (isRestoring) return;
+        const values = caseImages.map((item) => item.getAttribute("src"));
+        localStorage.setItem(IMAGE_STORAGE_KEY, JSON.stringify(values));
+      }
+
+      function saveDeletedItems() {
+        if (isRestoring) return;
+        const values = deleteItems.map((item) => item.classList.contains("is-deleted"));
+        localStorage.setItem(DELETE_STORAGE_KEY, JSON.stringify(values));
+      }
+
+      function createImageControls() {
+        caseImages.forEach((image, index) => {
+          const cover = image.closest(".case-cover");
+          const button = document.createElement("button");
+          const input = document.createElement("input");
+
+          button.type = "button";
+          button.className = "image-edit-button";
+          button.textContent = "换图";
+
+          input.type = "file";
+          input.accept = "image/*";
+          input.hidden = true;
+
+          button.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            const useUrl = confirm("要粘贴网络图片地址吗？\n确定：粘贴图片地址\n取消：选择本地图片");
+            if (useUrl) {
+              const url = prompt("粘贴图片地址：", image.getAttribute("src") || "");
+              if (url && url.trim()) {
+                pushHistory();
+                image.src = url.trim();
+                saveImages();
+              }
+              return;
+            }
+            input.click();
+          });
+
+          input.addEventListener("change", () => {
+            const file = input.files && input.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+              pushHistory();
+              image.src = reader.result;
+              try {
+                saveImages();
+              } catch (error) {
+                alert("这张图片文件有点大，浏览器保存不下。可以换一张小一点的图片，或使用网络图片地址。");
+              }
+            });
+            reader.readAsDataURL(file);
+            input.value = "";
+          });
+
+          cover.append(button, input);
+        });
+      }
+
+      function createDeleteControls() {
+        deleteItems.forEach((item) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "delete-item-button";
+          button.textContent = "删除";
+
+          button.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            if (!confirm("确定删除这一项内容吗？")) return;
+            pushHistory();
+            item.classList.add("is-deleted");
+            saveDeletedItems();
+          });
+
+          item.append(button);
+        });
+      }
+
+      function setEditing(isEditing) {
+        document.body.classList.toggle("editing", isEditing);
+        editableItems.forEach((item) => {
+          item.contentEditable = String(isEditing);
+          item.spellcheck = false;
+        });
+        document.querySelectorAll(".image-edit-button, .delete-item-button").forEach((item) => {
+          item.contentEditable = "false";
+        });
+        editToggle.textContent = isEditing ? "完成编辑" : "开始编辑";
+      }
+
+      function downloadEditedPage() {
+        saveEdits();
+        const clone = document.documentElement.cloneNode(true);
+        clone.querySelectorAll("[contenteditable]").forEach((item) => {
+          item.removeAttribute("contenteditable");
+          item.removeAttribute("spellcheck");
+        });
+        clone.querySelectorAll(".image-edit-button, .delete-item-button, input[type='file']").forEach((item) => item.remove());
+        clone.querySelector(".edit-toolbar")?.remove();
+        clone.querySelector(".edit-hint")?.remove();
+        clone.querySelector("script")?.remove();
+        const html = "<!doctype html>\n" + clone.outerHTML;
+        const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "我的运营作品集.html";
+        link.click();
+        URL.revokeObjectURL(link.href);
+      }
+
+      loadEdits();
+      createImageControls();
+      createDeleteControls();
+
+      editToggle.addEventListener("click", () => {
+        const willEdit = !document.body.classList.contains("editing");
+        if (willEdit) {
+          pushHistory();
+        }
+        setEditing(willEdit);
+      });
+
+      editableItems.forEach((item) => {
+        item.addEventListener("focus", () => {
+          if (document.body.classList.contains("editing") && !item.dataset.historyCaptured) {
+            pushHistory();
+            item.dataset.historyCaptured = "true";
+          }
+        });
+
+        item.addEventListener("blur", () => {
+          delete item.dataset.historyCaptured;
+        });
+
+        item.addEventListener("input", saveEdits);
+        item.addEventListener("click", (event) => {
+          if (document.body.classList.contains("editing")) {
+            event.preventDefault();
+          }
+        });
+      });
+
+      undoAction.addEventListener("click", () => {
+        const previous = historyStack.pop();
+        if (!previous) return;
+        applyState(previous);
+        updateUndoButton();
+      });
+
+      savePage.addEventListener("click", downloadEditedPage);
+
+      resetPage.addEventListener("click", () => {
+        if (!confirm("确定要恢复成模板默认内容吗？")) return;
+        pushHistory();
+        localStorage.removeItem(STORAGE_KEY);
+        localStorage.removeItem(IMAGE_STORAGE_KEY);
+        localStorage.removeItem(DELETE_STORAGE_KEY);
+        editableItems.forEach((item, index) => {
+          item.innerHTML = originalContent[index];
+        });
+        caseImages.forEach((item, index) => {
+          item.src = originalImages[index];
+        });
+        deleteItems.forEach((item) => {
+          item.classList.remove("is-deleted");
+        });
+        setEditing(false);
+      });
+
+      updateUndoButton();
+    })();
+  </script>
+</body>
+</html>

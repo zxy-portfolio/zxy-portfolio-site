@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2200" viewBox="0 0 1600 2200">
+  <defs>
+    <style>
+      .bg { fill: #f8f3eb; }
+      .ink { fill: #2d241f; }
+      .muted { fill: #6f625b; }
+      .brown { fill: #7a4a33; }
+      .cream { fill: #fffdf8; }
+      .peach { fill: #f6c9ad; }
+      .rose { fill: #e58a8a; }
+      .sage { fill: #9eb7a5; }
+      .sky { fill: #9cc7e8; }
+      .gold { fill: #e7c36b; }
+      .line { stroke: #2d241f; stroke-width: 5; }
+      .thin { stroke: #c9b6a4; stroke-width: 3; }
+      text { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; letter-spacing: 0; }
+      .en { font-family: Arial, sans-serif; font-weight: 900; letter-spacing: 1px; }
+      .title { font-size: 74px; font-weight: 900; }
+      .subtitle { font-size: 28px; font-weight: 700; }
+      .h2 { font-size: 34px; font-weight: 900; }
+      .h3 { font-size: 26px; font-weight: 900; }
+      .body { font-size: 21px; font-weight: 700; }
+      .small { font-size: 18px; font-weight: 700; }
+      .tiny { font-size: 15px; font-weight: 700; }
+      .card { fill: #ffffff; stroke: #2d241f; stroke-width: 5; }
+      .shadow { filter: drop-shadow(8px 8px 0 rgba(45, 36, 31, 1)); }
+    </style>
+    <pattern id="dots" width="46" height="46" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="4" fill="#dba78d" opacity="0.35"/>
+    </pattern>
+    <linearGradient id="coffeeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff9ec"/>
+      <stop offset="0.56" stop-color="#f5d0a7"/>
+      <stop offset="1" stop-color="#9a5031"/>
+    </linearGradient>
+    <linearGradient id="brownGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffefd4"/>
+      <stop offset="0.55" stop-color="#e8b17b"/>
+      <stop offset="1" stop-color="#8b4f34"/>
+    </linearGradient>
+  </defs>
+
+  <rect class="bg" width="1600" height="2200"/>
+  <rect width="1600" height="2200" fill="url(#dots)" opacity="0.55"/>
+  <circle cx="1360" cy="150" r="150" fill="#ecdab8" opacity="0.9"/>
+  <circle cx="160" cy="1940" r="190" fill="#dbe8ee" opacity="0.85"/>
+
+  <rect x="64" y="64" width="1472" height="2072" rx="42" class="card shadow"/>
+
+  <!-- Header -->
+  <g transform="translate(112 110)">
+    <g>
+      <rect x="0" y="0" width="108" height="108" rx="24" fill="#fff1dd" class="line"/>
+      <path d="M28 72c18-31 41-49 66-53-9 23-28 42-66 53Z" fill="#7a4a33" stroke="#2d241f" stroke-width="5"/>
+      <path d="M30 76c24-6 48-4 70 6-16 13-42 16-70-6Z" fill="#f6c9ad" stroke="#2d241f" stroke-width="5"/>
+    </g>
+    <text x="140" y="56" class="en" font-size="28" fill="#7a4a33">COFFEE MBTI CAMPAIGN</text>
+    <text x="140" y="128" class="title ink">雀巢咖啡竞品分析与市场调研</text>
+    <text x="143" y="176" class="subtitle muted">校园活动策略 / 用户洞察 / 品牌传播 / 试饮转化</text>
+
+    <g transform="translate(774 6)">
+      <rect x="0" y="0" width="560" height="56" rx="12" fill="#fff3e5"/>
+      <rect x="210" y="0" width="140" height="56" rx="12" fill="#e7c36b"/>
+      <text x="24" y="36" class="tiny ink">企业介绍</text>
+      <text x="142" y="36" class="tiny ink">市场分析</text>
+      <text x="234" y="36" class="tiny ink">竞品分析</text>
+      <text x="380" y="36" class="tiny ink">商业策略</text>
+    </g>
+  </g>
+
+  <!-- Main title bar -->
+  <g transform="translate(112 320)">
+    <rect x="0" y="0" width="1376" height="240" rx="30" fill="#5f3c2b" class="line"/>
+    <text x="54" y="70" fill="#fff5e0" class="en small">NESCAFE CAMPUS COFFEE CAMPAIGN</text>
+    <text x="54" y="156" fill="#fffdf8" class="title">COFFEE MBTI</text>
+    <text x="56" y="206" fill="#f3d4be" class="subtitle">找到你的咖啡人格 · 线上测试 / 盲盒冲泡实验室 / 转发领试饮</text>
+    <g transform="translate(1110 44)">
+      <circle cx="104" cy="76" r="56" fill="#e7c36b" class="line"/>
+      <path d="M94 32h20l8 24h-36z" fill="#fff" stroke="#2d241f" stroke-width="5"/>
+      <path d="M70 134c0-28 18-44 34-44h18c16 0 34 16 34 44" fill="#fff" stroke="#2d241f" stroke-width="5"/>
+      <path d="M96 134c0-20 8-33 18-33s18 13 18 33" fill="none" stroke="#2d241f" stroke-width="5"/>
+    </g>
+  </g>
+
+  <!-- Competitor analysis -->
+  <g transform="translate(112 610)">
+    <text x="0" y="0" class="h2 ink">一、竞品分析矩阵</text>
+    <text x="0" y="40" class="small muted">对比维度：产品类型 / 价格 / 场景 / 用户感受 / 传播启发</text>
+
+    <g transform="translate(0 76)">
+      <rect x="0" y="60" width="170" height="68" rx="14" fill="#f6c9ad" class="line"/>
+      <rect x="0" y="160" width="170" height="68" rx="14" fill="#f6c9ad" class="line"/>
+      <rect x="0" y="260" width="170" height="68" rx="14" fill="#f6c9ad" class="line"/>
+      <rect x="0" y="360" width="170" height="68" rx="14" fill="#f6c9ad" class="line"/>
+      <rect x="0" y="460" width="170" height="68" rx="14" fill="#f6c9ad" class="line"/>
+      <text x="35" y="103" class="h3 ink">产品类型</text>
+      <text x="35" y="203" class="h3 ink">价格</text>
+      <text x="35" y="303" class="h3 ink">用户场景</text>
+      <text x="35" y="403" class="h3 ink">品牌感知</text>
+      <text x="35" y="503" class="h3 ink">传播启发</text>
+
+      <g transform="translate(194 0)">
+        <rect width="275" height="560" rx="36" fill="#ffffff" class="line"/>
+        <text x="72" y="56" class="h3 ink">新东方</text>
+        <text x="62" y="88" class="tiny muted">教育服务 / 场景营销</text>
+        <text x="30" y="145" class="body muted">课程、活动、资料包</text>
+        <text x="30" y="245" class="body muted">中高端，重服务感</text>
+        <text x="30" y="345" class="body muted">家长咨询、升学规划</text>
+        <text x="30" y="445" class="body muted">专业可信，但偏理性</text>
+        <text x="30" y="522" class="body muted">用校园活动补充温度</text>
+      </g>
+
+      <g transform="translate(494 0)">
+        <rect width="275" height="560" rx="36" fill="#ffffff" class="line"/>
+        <text x="88" y="56" class="h3 ink">学而思</text>
+        <text x="70" y="88" class="tiny muted">学习产品 / 智能化</text>
+        <text x="30" y="145" class="body muted">素养课、学习机</text>
+        <text x="30" y="245" class="body muted">偏高，决策周期长</text>
+        <text x="30" y="345" class="body muted">K12 学生 / 家长</text>
+        <text x="30" y="445" class="body muted">功能强，互动感一般</text>
+        <text x="30" y="522" class="body muted">做低门槛体验入口</text>
+      </g>
+
+      <g transform="translate(794 0)">
+        <rect width="275" height="560" rx="36" fill="#ffffff" class="line"/>
+        <text x="88" y="56" class="h3 ink">猿辅导</text>
+        <text x="64" y="88" class="tiny muted">在线学习 / 工具型</text>
+        <text x="30" y="145" class="body muted">网课、题库、硬件</text>
+        <text x="30" y="245" class="body muted">中等，常有促销</text>
+        <text x="30" y="345" class="body muted">学生高频使用</text>
+        <text x="30" y="445" class="body muted">效率强，品牌温度弱</text>
+        <text x="30" y="522" class="body muted">用线下场景增强信任</text>
+      </g>
+
+      <g transform="translate(1094 0)">
+        <rect width="275" height="560" rx="36" fill="#ffffff" class="line"/>
+        <text x="88" y="56" class="h3 ink">高途</text>
+        <text x="70" y="88" class="tiny muted">直播课 / 转化强</text>
+        <text x="30" y="145" class="body muted">直播、规划、名师</text>
+        <text x="30" y="245" class="body muted">中高，优惠驱动</text>
+        <text x="30" y="345" class="body muted">家长决策型</text>
+        <text x="30" y="445" class="body muted">转化清晰，活动感弱</text>
+        <text x="30" y="522" class="body muted">搭配公益场景更柔和</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Market insight -->
+  <g transform="translate(112 1280)">
+    <text x="0" y="0" class="h2 ink">二、市场调研与用户洞察</text>
+    <text x="0" y="40" class="small muted">面向学生与家长两类核心人群，强调“便利触达 + 可信内容 + 低压转化”</text>
+
+    <g transform="translate(0 78)">
+      <rect width="660" height="348" rx="30" fill="#eaf5ee" class="line"/>
+      <text x="34" y="60" class="h3 ink">市场趋势</text>
+      <text x="34" y="112" class="body muted">1. 教培竞争更看重品牌信任与内容触达。</text>
+      <text x="34" y="158" class="body muted">2. 校园场景适合做轻量互动和福利引流。</text>
+      <text x="34" y="204" class="body muted">3. 家长更愿意为“资料价值 + 升学建议”停留。</text>
+      <text x="34" y="250" class="body muted">4. 学生更容易被“有趣玩法 + 小礼品”吸引。</text>
+      <text x="34" y="308" class="en small" fill="#0e7c66">Insight: reduce resistance, increase trust.</text>
+    </g>
+
+    <g transform="translate(716 78)">
+      <rect width="660" height="348" rx="30" fill="#fff4e4" class="line"/>
+      <text x="34" y="60" class="h3 ink">目标用户</text>
+      <text x="34" y="112" class="body muted">学生：需要趣味活动、免费资料、现场参与感。</text>
+      <text x="34" y="158" class="body muted">家长：需要可信内容、升学规划、教育品牌背书。</text>
+      <text x="34" y="204" class="body muted">转化逻辑：活动参与 → 社群沉淀 → 1v1 咨询。</text>
+      <text x="34" y="250" class="body muted">抓手：公益义卖 / 高分笔记 / 择校报告。</text>
+      <text x="34" y="308" class="en small" fill="#8b4f34">Goal: move from traffic to leads.</text>
+    </g>
+  </g>
+
+  <!-- Promotion strategy -->
+  <g transform="translate(112 1736)">
+    <text x="0" y="0" class="h2 ink">三、推广策略</text>
+    <text x="0" y="40" class="small muted">线上用内容预热，线下用活动承接，形成可复用的获客链路。</text>
+
+    <g transform="translate(0 74)">
+      <rect width="1376" height="280" rx="30" fill="#ffffff" class="line"/>
+      <rect x="30" y="30" width="610" height="220" rx="24" fill="#eaf5ee" class="thin"/>
+      <rect x="736" y="30" width="610" height="220" rx="24" fill="#fff0f3" class="thin"/>
+
+      <text x="64" y="78" class="h3 ink">线上推广 Online Promotion</text>
+      <text x="64" y="126" class="body muted">• 公众号 / 社群发布活动预告海报</text>
+      <text x="64" y="164" class="body muted">• 突出“免费资料 + 体验活动”利益点</text>
+      <text x="64" y="202" class="body muted">• 扫码进群领取活动指引与报名信息</text>
+
+      <text x="770" y="78" class="h3 ink">线下推广 Offline Promotion</text>
+      <text x="770" y="126" class="body muted">• 运动会、跳蚤市场、社团联动摊位</text>
+      <text x="770" y="164" class="body muted">• 设置闯关游戏、义卖摊位与咨询台</text>
+      <text x="770" y="202" class="body muted">• 现场发放资料包，引导家长后续咨询</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(112 2056)">
+    <rect width="1376" height="66" rx="18" fill="#2d241f"/>
+    <text x="34" y="43" fill="#fffdf8" class="small">结论：新东方更适合通过“校园活动 + 内容价值 + 咨询承接”建立信任，而不是单纯硬广竞争。</text>
+  </g>
+</svg>
